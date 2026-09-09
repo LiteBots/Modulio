@@ -1,46 +1,1170 @@
 <!doctype html>
-<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f7f8fa"><meta name="description" content="Modulio — oprogramowanie dopasowane do Twojej branży. Poznaj moduły dla gastronomii i usług, sprawdź pakiety i skonfiguruj koszt wdrożenia."><title>Modulio — Mniej chaosu. Więcej biznesu.</title><link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTciIGZpbGw9IiNmZDc2NTkiLz48dGV4dCB4PSIxMiIgeT0iNDYiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC13ZWlnaHQ9IjkwMCIgZm9udC1zaXplPSI0OCIgZmlsbD0iIzE4MjMyMSI+bTwvdGV4dD48L3N2Zz4K" type="image/svg+xml"><style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap');
-:root{--ink:#202b28;--muted:#717875;--coral:#ff7d60;--paper:#f8f9fb;--line:#e4e7e7;--green:#dcece3}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;background:var(--paper);color:var(--ink);font:16px 'DM Sans',Arial,sans-serif}button,input,select{font:inherit}button,a,summary{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}a{color:inherit;text-decoration:none}button{cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #cc5035;outline-offset:5px}button{color:inherit}h1,h2,h3,p{margin:0}h1,h2,h3{font-family:'Manrope',Arial,sans-serif}h1{font-size:clamp(48px,5.25vw,78px);line-height:1.09;letter-spacing:-4.4px;font-weight:650}h1>span{position:relative;z-index:0}h1>span:after{content:'';position:absolute;bottom:5px;left:-3px;width:103%;height:15px;background:var(--coral);z-index:-1;transform:rotate(-2deg)}h2{font-size:clamp(32px,3.5vw,49px);line-height:1.16;letter-spacing:-2px;font-weight:600}h3{letter-spacing:-.5px}.serif{font-family:Georgia,serif;font-style:italic;font-weight:400}p{line-height:1.75;color:var(--muted)}.wrap{max-width:1280px;margin:auto;padding-left:48px;padding-right:48px}header{max-width:1376px;margin:auto;height:100px;display:flex;align-items:center;padding:0 48px;gap:40px}.logo{display:inline-flex;align-items:center;font-size:30px;font-weight:750;letter-spacing:-1.6px}.mark{display:inline-grid;place-items:center;background:var(--coral);width:35px;height:35px;border-radius:9px;margin-right:10px;font:900 32px Arial;letter-spacing:-3px;padding-right:3px}.logo-dot{color:var(--coral)}nav{margin:auto;display:flex;gap:32px;font-size:14px;font-weight:600}nav a:hover{color:#be4c32}.button{border:1px solid transparent;padding:17px 24px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;gap:24px;font-size:14px;font-weight:700;transition:transform .2s,background .2s;min-height:48px}.button:hover{transform:translateY(-3px)}.button span{font-size:20px}.coral{background:var(--coral)}.coral:hover{background:#ff967d}.dark{background:var(--ink);color:white}.dark:hover{background:#36493e}.small{padding:10px 18px}.outline{background:transparent;border-color:#ccd0ce}.text-button{background:none;border:0;padding:0;display:inline-flex;align-items:center;gap:12px;font-size:14px;font-weight:600}.text-button:hover{text-decoration:underline}.menu-button{display:none}.eyebrow{font-size:12px;letter-spacing:1.8px;font-weight:650;display:flex;align-items:center;gap:10px;margin-bottom:25px}.line{width:22px;height:2px;background:var(--coral)}.hero{display:grid;grid-template-columns:1.02fr 1fr;align-items:center;gap:30px;min-height:640px;padding-top:50px;padding-bottom:76px}.hero-copy>p{max-width:425px;font-size:17px;margin-top:28px}.hero-actions{display:flex;align-items:center;gap:25px;margin-top:32px}.play{border:1px solid #cbd0ce;border-radius:50%;width:29px;height:29px;display:grid;place-items:center;font-size:10px}.hero-notes{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--muted);margin-top:27px}.hero-visual{position:relative;padding:28px 0 35px 2px;min-width:0}.orb{position:absolute;inset:0 -10px 0 20px;background:#eef0ef;border-radius:48% 48% 45% 35%;z-index:-1}.dashboard{display:flex;background:white;border:1px solid #e4e7e5;border-radius:12px;box-shadow:0 25px 65px #20302b13;transform:perspective(1400px) rotateY(-7deg) rotateX(3deg) rotateZ(-2deg);overflow:hidden;animation:appear .9s ease both}.dash-side{display:flex;flex-direction:column;align-items:center;width:49px;flex-shrink:0;border-right:1px solid #eef0ee;background:#fafbfa;padding:18px 0;gap:16px}.mini-logo{font-size:23px;font-weight:800;letter-spacing:-3px;margin-bottom:8px}.side-icon{width:27px;height:27px;display:grid;place-items:center;color:#959b97}.side-icon.active{background:#ffe3da;color:#263c31;border-radius:6px}.side-icon.last{margin-top:auto}.dash-main{padding:20px 22px;flex:1;min-width:0}.dash-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #edf0ed;padding-bottom:15px;font-size:12px}.avatar{background:#e7ecdf;border-radius:50%;font-size:12px;width:25px;height:25px;display:grid;place-items:center}.muted{color:#979e99}.dash-title{margin-top:23px;position:relative}.dash-title .muted{font-size:9px;letter-spacing:.5px}.dash-title h3{font-size:16px;margin-top:7px;font-weight:650}.dash-title h3>span{color:var(--coral);font-size:23px}.demo-label{font-size:8px;letter-spacing:1px;color:#808981;display:block;margin-top:7px}.metrics{display:grid;grid-template-columns:1.3fr 1fr;margin-top:20px;gap:10px}.metrics>div{border:1px solid #e9ede9;border-radius:6px;padding:12px 10px;display:flex;flex-direction:column;gap:8px}.metrics span{font-size:10px;color:#868e88}.metrics strong{font-size:25px;letter-spacing:-1px}.metrics small{font-size:13px;font-weight:400}.metrics em{font-size:8px;color:#5c866c;font-style:normal}.chart-head{display:flex;justify-content:space-between;font-size:10px;margin-top:24px}.chart-head>span{color:var(--muted);font-size:9px}.chart{height:134px;display:flex;margin-top:14px}.gridlines{display:flex;flex-direction:column;justify-content:space-between;padding-bottom:23px;font-size:8px;color:#969c98;width:31px}.bars{flex:1;display:flex;justify-content:space-around;background:repeating-linear-gradient(to top,transparent 0,transparent 35px,#eff1ee 35px,#eff1ee 36px)}.bars>div{display:flex;align-items:center;justify-content:flex-end;flex-direction:column;width:9%;height:100%;gap:8px}.bars i{display:block;width:100%;height:var(--h);max-height:106px;border-radius:3px 3px 0 0;background:#dce8df;transform-origin:bottom;animation:grow 1.2s ease both}.bars>div:nth-child(6) i{background:var(--coral)}.bars span{font-size:8px;color:#8b958d}.dash-task{display:flex;align-items:center;gap:9px;border-top:1px solid #ecefeb;padding-top:14px;margin-top:15px;font-size:10px}.task-check{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#e4f1e6;color:#719676}.dash-task div{display:flex;flex-direction:column;gap:4px;flex:1}.dash-task div>span{font-size:8px;color:#8b948c}.floating-card{position:absolute;bottom:15px;left:-27px;background:white;padding:16px 20px;box-shadow:0 12px 35px #26362a16;border:1px solid #eff0ec;border-radius:9px;display:flex;align-items:center;gap:13px;transform:rotate(-4deg);animation:float 6s ease-in-out infinite}.floating-card b{font-size:13px;line-height:1.4}.floating-card div>span{display:block;font-size:9px;color:#8b948c;margin-top:5px}.floating-icon{background:#e3eee5;border-radius:8px;width:42px;height:42px;display:grid;place-items:center;font-size:25px}.visual-caption{margin-top:30px;display:flex;align-items:center;justify-content:flex-end;gap:8px;font-size:8px;color:#929a95;letter-spacing:1px}.visual-caption>span{width:5px;height:5px;border-radius:50%;background:#91aa97}.industry-strip{border-block:1px solid var(--line);background:#f0f2f3}.industry-strip>.wrap{min-height:98px;display:flex;align-items:center;justify-content:space-between;gap:20px}.industry-strip span{font-size:10px;color:#8b918d;line-height:1.8;letter-spacing:1.5px}.industry-strip b{font-size:16px;letter-spacing:-.5px;font-weight:500;color:#5a645f}.section{padding-top:103px;padding-bottom:99px}.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:35px;margin-bottom:35px}.section-heading .eyebrow,.platform-grid .eyebrow{color:#7d867f}.section-heading p{font-size:15px;padding-bottom:5px}.filter-row{display:flex;gap:8px;margin:40px 0 24px;flex-wrap:wrap}.filter{padding:11px 17px;border-radius:6px;background:transparent;border:1px solid transparent;font-size:13px;color:#707b73}.filter.selected{background:var(--ink);color:white}.filter span{font-size:10px;background:#ffffff20;padding:2px 5px;border-radius:3px;margin-left:5px}.solutions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.solution-card{background:white;border:1px solid #e3e7e4;border-radius:12px;overflow:hidden;transition:transform .25s,box-shadow .25s}.solution-card:hover{transform:translateY(-5px);box-shadow:0 15px 25px #24372808}.card-art{height:176px;padding:25px 28px;overflow:hidden;position:relative;background:var(--card)}.card-art .mini-window{background:#ffffffdd;border:1px solid #ffffff;border-radius:7px;padding:13px;max-width:255px;margin:auto;transform:rotate(-4deg);box-shadow:0 10px 20px #30402910}.mini-window>div{display:flex;justify-content:space-between;font-size:10px;margin-bottom:10px}.mini-window .mini-row{border-top:1px solid #2034280c;padding-top:8px;margin-top:8px;margin-bottom:0;font-size:9px}.mini-window .pill{color:#537c61;background:#e3eee4;padding:2px 6px;border-radius:4px;font-size:8px}.card-symbol{position:absolute;font-size:50px;bottom:13px;right:20px;color:#ffffffc0}.card-body{padding:23px}.card-top{display:flex;align-items:center;justify-content:space-between}.card-body h3{font-size:21px}.status{font-size:9px;letter-spacing:.5px;color:#818d84}.card-body p{font-size:14px;margin-top:11px;min-height:72px}.card-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:15px}.card-tags span{background:#f3f5f4;color:#738177;padding:5px 7px;border-radius:4px;font-size:10px}.card-bottom{margin-top:23px;padding-top:17px;border-top:1px solid #edf0ed;display:flex;align-items:center;justify-content:space-between}.card-bottom>span{font-size:12px;color:#7d8980}.card-bottom b{font-size:16px;color:var(--ink)}.card-bottom button{background:none;border:none;font-size:12px;font-weight:600;padding:5px 0}.custom-note{display:flex;align-items:center;gap:15px;background:#edf0ef;border-radius:8px;padding:20px 23px;margin-top:24px}.custom-note>span{font-size:27px}.custom-note p{font-size:13px;flex:1}.custom-note b{color:#526159;font-weight:500}.platform-section{background:#eaf0ed;padding:94px 0}.platform-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.platform-grid>div>p{font-size:15px;max-width:425px;margin-top:22px}.platform-tabs{margin-top:29px}.platform-tabs button{display:flex;align-items:center;text-align:left;gap:18px;border:0;background:transparent;border-bottom:1px solid #d2dbd5;width:100%;padding:18px 0;color:#819086}.platform-tabs button[aria-selected=true]{color:var(--ink)}.platform-tabs button>span{font-size:13px}.platform-tabs button>span:last-child{margin-left:auto;font-size:20px}.platform-tabs b{font-size:16px}.platform-tabs small{display:block;font-size:12px;margin-top:5px}.module-preview{background:white;padding:29px;border-radius:12px;border:1px solid #dce4de;box-shadow:0 25px 50px #3f5c4310;transform:rotate(2deg);min-height:395px}.preview-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #edf0ed;padding-bottom:20px}.preview-header b{font-size:17px}.preview-header>span{font-size:10px;color:#8c968e}.preview-intro{font-size:12px;margin:22px 0;color:#8c978e}.preview-row{display:flex;align-items:center;gap:12px;padding:17px 0;border-bottom:1px solid #edf0ed}.preview-avatar{width:33px;height:33px;display:grid;place-items:center;background:#edf2e9;border-radius:50%;font-size:11px}.preview-row>div{flex:1}.preview-row b{font-size:13px}.preview-row small{display:block;font-size:11px;color:#8d978e;margin-top:5px}.preview-row>span:last-child{font-size:10px;padding:5px 8px;background:#e6f0e6;border-radius:4px;color:#647e62}.preview-footer{font-size:11px;color:#7f8d80;margin-top:24px;display:flex;align-items:center;gap:8px}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:33px;margin-top:58px}.steps article>span{display:block;color:#ad6852;font-size:14px;margin-bottom:23px}.steps h3{font-size:17px}.steps p{font-size:14px;margin-top:13px;line-height:1.75}.pricing-section{padding:90px 0;background:#f0f2f4}.center-heading{text-align:center}.center-heading .eyebrow{justify-content:center}.center-heading p{font-size:15px;margin-top:20px}.concept-note{display:inline-block;font-size:11px;color:#727d76;border-bottom:1px dashed #a8b1ac;margin-top:12px;padding-bottom:4px}.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:57px;align-items:stretch}.price-card{background:#fafbfc;border:1px solid #dfe4e1;border-radius:12px;padding:30px;position:relative}.price-card.featured{background:#ffe3d7;border-color:#ffab8c}.recommended{position:absolute;top:-24px;left:-1px;right:-1px;height:32px;border-radius:10px 10px 0 0;background:var(--coral);font-size:10px;letter-spacing:1px;text-align:center;padding:9px}.plan-icon{font-size:27px;line-height:1;margin-bottom:18px}.price-card h3{font-size:25px}.price-card>p{font-size:12px;margin-top:8px;min-height:35px}.price{font-family:'Manrope',Arial;font-size:49px;letter-spacing:-2px;margin-top:18px;font-weight:600}.price span{font:13px 'DM Sans',Arial;letter-spacing:0;color:#7c827b}.setup{font-size:11px;color:#7d847d;margin-top:8px}.price-card .button{width:100%;margin-top:25px}.price-card ul{padding:0;list-style:none;display:flex;flex-direction:column;gap:16px;margin-top:26px;font-size:13px;color:#5d6a60}.price-card li:before{content:'✓';margin-right:10px;color:#778970}.pricing-foot{text-align:center;font-size:11px;margin-top:25px;line-height:1.9}.calculate{display:flex;margin:20px auto 0}.faq-section{display:grid;grid-template-columns:1fr 1.2fr;gap:50px}.faq details{border-bottom:1px solid #dde3de;padding:20px 0}.faq details:first-child{padding-top:0}.faq summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:15px;font-weight:600;cursor:pointer}.faq summary::-webkit-details-marker{display:none}.faq summary span{font-size:22px;font-weight:400}.faq details[open] summary span{transform:rotate(45deg)}.faq p{font-size:14px;line-height:1.8;margin-top:15px}.cta{background:#ffc2a8;border-radius:15px;position:relative;overflow:hidden;padding-top:52px;padding-bottom:52px;max-width:1184px}.cta .eyebrow{font-size:10px;margin-bottom:18px}.cta h2{font-size:48px;position:relative;z-index:1}.cta .button{margin-top:26px;position:relative;z-index:1}.cta p{font-size:12px;color:#89685b;margin-top:16px}.cta-symbol{position:absolute;right:85px;top:5px;font-size:320px;font-family:Arial;color:#ef916e;line-height:1.1;animation:turn 50s linear infinite}footer{padding-top:65px;padding-bottom:25px}.footer-top{display:flex;align-items:center;gap:48px;padding-bottom:40px}.footer-top p{font-size:12px}.footer-top>div{margin-left:auto;display:flex;gap:27px;font-size:13px}.footer-bottom{border-top:1px solid #e0e5e1;display:flex;justify-content:space-between;padding-top:24px;color:#929a94;font-size:11px}dialog{border:1px solid #dde5df;border-radius:18px;max-width:800px;width:calc(100% - 32px);padding:34px;color:var(--ink);background:var(--paper);max-height:90dvh;overflow-y:auto;box-shadow:0 25px 100px #12271f40}dialog::backdrop{background:#15282080;backdrop-filter:blur(6px)}.dialog-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}.dialog-head .eyebrow{margin:0}.close{font-size:30px;border:0;background:none;width:38px;height:38px}.dialog-head+h2{font-size:34px}.dialog-head~p{font-size:14px;margin-top:15px}.config-layout{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:30px 0}.config-fields{display:flex;flex-direction:column}.config-fields label{font-size:14px;font-weight:600;margin:15px 0 10px}.config-fields label:first-child{margin-top:0}.config-fields select{border:1px solid #ced7d0;border-radius:7px;padding:12px;background:white;color:var(--ink);font-size:14px;max-width:100%}.config-fields output{float:right}.config-fields small{font-size:12px;color:#7c8a7f;line-height:1.6;margin-top:7px}input[type=range]{accent-color:#ec785b;width:100%;margin:12px 0}.estimate{background:#e9f0eb;border-radius:12px;padding:22px}.estimate>span{font-size:10px;letter-spacing:1px}.estimate>strong{display:block;font-size:40px;margin:14px 0 25px;letter-spacing:-2px}.estimate>div{display:flex;gap:15px;justify-content:space-between;font-size:12px;margin:14px 0}.estimate>div>b{white-space:nowrap}.estimate p{font-size:11px;line-height:1.7;border-top:1px solid #d4dfd6;padding-top:15px;margin-top:20px}#download-state{display:block;margin-top:12px;font-size:12px;color:#657d6b}#detail-content h2{font-size:35px;margin:20px 0}#detail-content p{margin-bottom:20px}#detail-content ul{padding-left:20px;line-height:2;color:#607467;font-size:15px}#detail-content .concept-note{margin:10px 0 25px}@keyframes appear{from{opacity:0;translate:0 20px}to{opacity:1;translate:0}}@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}@keyframes float{50%{translate:0 -7px}}@keyframes turn{to{transform:rotate(360deg)}}
-@media(min-width:1450px){.hero{min-height:710px}.dashboard{scale:1.035}.hero-visual{padding-left:10px}}@media(max-width:1100px){header{gap:20px;padding:0 30px}nav{gap:20px}.wrap{padding-left:30px;padding-right:30px}h1{font-size:56px;letter-spacing:-3px}.hero{gap:20px;min-height:600px}.hero-actions{gap:14px}.hero-notes{gap:8px}.dashboard{transform:rotate(-2deg)}.dash-main{padding:15px}.dash-title h3{font-size:13px}.floating-card{left:0}.platform-grid{gap:40px}.industry-strip b{font-size:14px}.price-card{padding:24px}.cta{margin:0 30px}.card-body{padding:18px}.card-body h3{font-size:18px}.card-body p{min-height:98px}.custom-note{flex-wrap:wrap}.card-art{padding:24px 18px}}
-@media(max-width:800px){header{height:80px;padding:0 24px;gap:15px}header>.button{margin-left:auto}nav{display:none;position:absolute;top:80px;left:0;right:0;background:var(--paper);padding:24px;z-index:20;border-bottom:1px solid var(--line)}nav.open{display:flex;flex-direction:column}.menu-button{display:block;border:0;background:none;font-size:23px;padding:10px}.logo{font-size:26px}.hero{grid-template-columns:1fr;gap:35px;padding-top:45px;padding-bottom:55px}.hero-copy{text-align:center}.eyebrow{font-size:10px}.hero-copy .eyebrow{justify-content:center}h1{font-size:64px;letter-spacing:-3px}.hero-copy>p{margin:25px auto 0}.hero-actions,.hero-notes{justify-content:center}.hero-visual{max-width:560px;width:100%;margin:auto;padding-left:20px;padding-right:20px}.dash-main{padding:22px}.dash-title h3{font-size:17px}.floating-card{left:0}.industry-strip>.wrap{flex-wrap:wrap;justify-content:center;padding-block:22px;gap:20px 27px}.industry-strip span{display:none}.section{padding-top:68px;padding-bottom:68px}.section-heading{align-items:flex-start;flex-direction:column;gap:22px}.section-heading .eyebrow{margin-bottom:20px}.solutions-grid{grid-template-columns:repeat(2,1fr)}.card-body p{min-height:75px}.platform-grid{grid-template-columns:1fr}.module-preview{max-width:520px;width:100%;margin:auto}.platform-section{padding:68px 0}.steps{grid-template-columns:repeat(2,1fr);gap:35px}.pricing-grid{grid-template-columns:1fr;max-width:450px;margin:35px auto 0;gap:40px}.price-card>p{min-height:0}.price-card li{font-size:14px}.price-card.featured{order:-1;margin-top:15px}.pricing-section{padding:65px 0}.faq-section{grid-template-columns:1fr}.cta h2{font-size:42px}.cta-symbol{right:-30px;top:30px;font-size:250px;opacity:.4}.footer-top{flex-wrap:wrap;gap:24px}.footer-top>div{margin-left:0;width:100%}.footer-bottom{gap:20px;line-height:1.6}h2{font-size:40px}.config-layout{gap:20px}}
-@media(max-width:480px){.wrap{padding-left:22px;padding-right:22px}header{padding:0 18px}header>.button{font-size:11px;padding:8px 11px;min-height:40px;gap:8px}.mark{width:29px;height:29px;font-size:27px;margin-right:6px}.logo{font-size:24px}.menu-button{padding:5px}.hero{padding-top:35px}.hero-copy .eyebrow{font-size:8px;letter-spacing:1.3px}h1{font-size:51px;letter-spacing:-2.9px}.hero-copy>p{font-size:15px}.hero-actions{gap:17px;flex-direction:column}.hero-notes{font-size:10px;gap:10px}.hero-visual{padding:10px 0 25px}.dash-side{width:34px}.dash-main{padding:12px}.dash-title h3{font-size:13px}.dash-title h3>span{font-size:17px}.metrics strong{font-size:23px}.metrics>div{padding:9px}.metrics span{font-size:8px}.metrics em{font-size:7px}.dash-top{font-size:10px}.floating-card{bottom:20px;left:-4px;scale:.85;transform-origin:left bottom}.visual-caption{font-size:6px}.solutions-grid{grid-template-columns:1fr}.card-art{height:170px}.card-body{padding:24px}.card-body h3{font-size:22px}.card-body p{min-height:0}.card-tags span{font-size:12px}.card-bottom button{font-size:14px}.status{font-size:11px}.filter{padding:10px 12px;font-size:12px}.custom-note{padding:18px;gap:10px}.custom-note p{min-width:200px}.custom-note .text-button{margin-left:35px}.section-heading p br{display:none}h2{font-size:35px;letter-spacing:-1.4px}.platform-grid{gap:35px}.module-preview{padding:20px;transform:rotate(1deg);min-height:370px}.preview-row b{font-size:12px}.preview-row>span:last-child{font-size:9px}.steps{gap:25px 18px;margin-top:38px}.steps h3{font-size:16px}.steps p{font-size:13px}.cta{margin:0 16px;padding:35px 25px}.cta h2{font-size:35px}.cta p{max-width:225px;font-size:11px}.cta .eyebrow{font-size:8px}.cta-symbol{right:-60px;top:66px;font-size:190px}.footer-bottom{flex-direction:column;gap:8px}.footer-top p{font-size:11px}.footer-top{gap:20px}.footer-top>div{justify-content:space-between;gap:10px;font-size:12px}dialog{padding:23px}.config-layout{grid-template-columns:1fr}.dialog-head+h2{font-size:29px}.dialog-head .eyebrow{font-size:9px}.estimate>strong{font-size:35px}#detail-content h2{font-size:29px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f6f2" />
+  <meta name="description" content="Modulio — modułowe i dedykowane oprogramowanie dla firm. Porządkuj procesy, zespół, klientów, koszty i dane w jednym systemie." />
+  <title>Modulio — system, który pracuje tak jak Twoja firma</title>
 
-</style></head><body>
-<header><a class="logo" href="#" aria-label="Modulio, strona główna"><span class="mark">m</span>modulio<span class="logo-dot">.</span></a><nav aria-label="Główna nawigacja"><a href="#rozwiazania">Rozwiązania</a><a href="#platforma">Platforma</a><a href="#jak-to-dziala">Jak to działa</a><a href="#cennik">Cennik</a></nav><button class="button small dark" data-config>Dobierz rozwiązanie <span>↗</span></button><button class="menu-button" aria-expanded="false" aria-label="Otwórz menu">☰</button></header>
-<main><section class="hero wrap"><div class="hero-copy"><div class="eyebrow"><span class="line"></span> TWÓJ BIZNES. DOBRZE POUKŁADANY.</div><h1>Mniej chaosu.<br>Więcej <span>biznesu.</span></h1><p>Oprogramowanie, które ogarnia codzienność Twojej firmy. Zlecenia, zespół i koszty — w jednym miejscu, na Twoich zasadach.</p><div class="hero-actions"><button class="button coral" data-config>Znajdź swój system <span>↗</span></button><a class="text-button" href="#platforma"><span class="play">▶</span> Zajrzyj do środka</a></div><div class="hero-notes"><span>✓ Jednorazowe wdrożenie</span><span>✓ Stały abonament</span><span>✓ Rozwój razem z Tobą</span></div></div>
-<div class="hero-visual"><div class="orb"></div><div class="dashboard"><aside class="dash-side"><span class="mini-logo">m.</span><span class="side-icon active">▦</span><span class="side-icon">▤</span><span class="side-icon">◷</span><span class="side-icon">♧</span><span class="side-icon last">⚙</span></aside><div class="dash-main"><div class="dash-top"><span>Przestrzeń Twojej firmy <span class="muted">⌄</span></span><span class="avatar">AK</span></div><div class="dash-title"><div><span class="muted">PONIEDZIAŁEK, 14 WRZEŚNIA</span><h3>Dobry dzień na dobry biznes <span>✺</span></h3></div><span class="demo-label">PODGLĄD DEMO</span></div><div class="metrics"><div><span>Przychód w tym miesiącu</span><strong id="demo-revenue">24 850 <small>zł</small></strong><em>↗ 12,8% względem poprzedniego</em></div><div><span id="demo-count-label">Zrealizowane zlecenia</span><strong id="demo-count">128</strong><span>Wszystko pod kontrolą</span></div></div><div class="chart-head"><b>Twój biznes w liczbach</b><span>Ten tydzień ⌄</span></div><div class="chart"><div class="gridlines"><span>8 tys.</span><span>4 tys.</span><span>0</span></div><div class="bars"><div style="--h:43%"><i></i><span>Pon</span></div><div style="--h:62%"><i></i><span>Wt</span></div><div style="--h:50%"><i></i><span>Śr</span></div><div style="--h:76%"><i></i><span>Czw</span></div><div style="--h:64%"><i></i><span>Pt</span></div><div style="--h:91%"><i></i><span>Sob</span></div><div style="--h:72%"><i></i><span>Nd</span></div></div></div><div class="dash-task"><span class="task-check">✓</span><div><b>Wszystko na swoim miejscu</b><span>Zespół, zadania i raporty w jednym panelu</span></div><span>↗</span></div></div></div><div class="floating-card"><span class="floating-icon">↗</span><div><b>Mniej klikania.<br>Więcej działania.</b><span>Jeden system. Wiele możliwości.</span></div></div><div class="visual-caption"><span></span> TAK MOŻE WYGLĄDAĆ TWÓJ DZIEŃ W MODULIO</div></div></section>
-<div class="industry-strip"><div class="wrap"><span>RÓŻNE BRANŻE.<br>JEDEN DOBRY SYSTEM.</span><b>♨ Gastronomia</b><b>▱ Usługi i serwis</b><b>↗ Transport</b><b>◇ Beauty & wellness</b><b>▦ Handel</b></div></div>
-<section class="section wrap" id="rozwiazania"><div class="section-heading"><div><div class="eyebrow">01 / ROZWIĄZANIA DLA FIRM</div><h2>Twoja branża.<br>Twoje <span class="serif">zasady gry.</span></h2></div><p>Nie musisz dopasowywać firmy do programu.<br>Wybierz system zbudowany wokół Twojej pracy.</p></div><div class="filter-row" role="group" aria-label="Filtruj rozwiązania"><button class="filter selected" data-filter="all" aria-pressed="true">Wszystkie rozwiązania <span>5</span></button><button class="filter" data-filter="gastronomia" aria-pressed="false">Gastronomia</button><button class="filter" data-filter="uslugi" aria-pressed="false">Usługi</button><button class="filter" data-filter="pozostale" aria-pressed="false">Pozostałe branże</button></div><div class="solutions-grid" id="solutions"></div><div class="custom-note"><span>✳</span><p>Twój biznes nie mieści się w jednej kategorii? <b>Zacznij od potrzeb, nie od etykietki.</b></p><button class="text-button" data-config>Dobierz moduły ↗</button></div></section>
-<section class="platform-section" id="platforma"><div class="wrap platform-grid"><div><div class="eyebrow">02 / JEDNO CENTRUM DOWODZENIA</div><h2>Wszystko się łączy.<br>Ty masz <span class="serif">spokój.</span></h2><p>Koniec szukania informacji w wiadomościach i kolejnych arkuszach. Zobacz koncepcję wspólnego panelu dla Twojej firmy.</p><div class="platform-tabs" role="tablist" aria-label="Moduły platformy"><button role="tab" aria-selected="true" id="tab-team" aria-controls="module-panel" data-module="team"><span>01</span><div><b>Zespół i zadania</b><small>Każdy wie, co ma zrobić.</small></div><span>↗</span></button><button role="tab" aria-selected="false" tabindex="-1" id="tab-money" aria-controls="module-panel" data-module="money"><span>02</span><div><b>Koszty i wyniki</b><small>Decyzje oparte na liczbach.</small></div><span>↗</span></button><button role="tab" aria-selected="false" tabindex="-1" id="tab-clients" aria-controls="module-panel" data-module="clients"><span>03</span><div><b>Klienci i zlecenia</b><small>Cała historia zawsze pod ręką.</small></div><span>↗</span></button></div></div><div class="module-preview" id="module-panel" role="tabpanel" aria-labelledby="tab-team"></div></div></section>
-<section class="section wrap" id="jak-to-dziala"><div class="section-heading"><div><div class="eyebrow">03 / PROSTY POCZĄTEK</div><h2>Od pomysłu do<br>codziennej <span class="serif">wygody.</span></h2></div><p>Jedna opłata za uruchomienie.<br>Potem przewidywalny miesięczny abonament.</p></div><div class="steps"><article><span>01 —</span><h3>Wybierasz rozwiązanie</h3><p>Określamy branżę, wielkość zespołu i procesy, które chcesz uporządkować.</p></article><article><span>02 —</span><h3>Ustawiamy Twój system</h3><p>Konfiguracja, podstawowe dane i uprawnienia. Zakres wdrożenia ustalamy przed startem.</p></article><article><span>03 —</span><h3>Twój zespół zaczyna działać</h3><p>Praktyczne wprowadzenie do panelu i wspólne przejście przez pierwszy proces.</p></article><article><span>04 —</span><h3>Rozwijasz się z nami</h3><p>Gdy potrzeby rosną, dodajesz kolejne moduły i zmieniasz pakiet.</p></article></div></section>
-<section class="pricing-section" id="cennik"><div class="wrap"><div class="center-heading"><div class="eyebrow">04 / PRZEWIDYWALNE KOSZTY</div><h2>Mały start.<br><span class="serif">Duże możliwości.</span></h2><p>Płacisz raz za wdrożenie. Potem tylko za wybrany pakiet.</p><span class="concept-note">Proponowany cennik — oferta przedpremierowa do potwierdzenia</span></div><div class="pricing-grid"><article class="price-card"><div class="plan-icon">▱</div><h3>Start</h3><p>Dobry początek dla małego zespołu.</p><div class="price">99 <span>zł / mies.</span></div><div class="setup">+ 499 zł jednorazowo za wdrożenie</div><button class="button outline" data-plan="start">Wybierz Start ↗</button><ul><li>Do 3 użytkowników</li><li>1 moduł branżowy</li><li>Klienci i podstawowe zadania</li><li>Podstawowy raport i eksport CSV</li><li>Wsparcie e-mail</li></ul></article><article class="price-card featured"><div class="recommended">REKOMENDOWANY NA START FIRMY</div><div class="plan-icon">✳</div><h3>Business</h3><p>Więcej kontroli nad codzienną pracą.</p><div class="price">199 <span>zł / mies.</span></div><div class="setup">+ 799 zł jednorazowo za wdrożenie</div><button class="button dark" data-plan="business">Wybierz Business ↗</button><ul><li>Do 10 użytkowników</li><li>3 moduły branżowe</li><li>Wszystko z pakietu Start</li><li>Grafik i ewidencja czasu pracy</li><li>Raporty kosztów i wyników</li><li>Pomoc w uruchomieniu systemu</li></ul></article><article class="price-card"><div class="plan-icon">↗</div><h3>Scale</h3><p>Dla większego zespołu i wielu procesów.</p><div class="price">349 <span>zł / mies.</span></div><div class="setup">+ 999 zł jednorazowo za wdrożenie</div><button class="button outline" data-plan="scale">Wybierz Scale ↗</button><ul><li>Do 25 użytkowników</li><li>5 modułów branżowych</li><li>Wszystko z pakietu Business</li><li>Widok wielu lokalizacji</li><li>Rozbudowane role i uprawnienia</li><li>Priorytet obsługi zgłoszeń</li></ul></article></div><p class="pricing-foot">Kwoty netto. Integracje, migracje niestandardowych danych i indywidualne funkcje wymagają osobnej wyceny.<br>Konfigurator przedstawia propozycję kosztów i nie uruchamia płatnej usługi.</p><button class="text-button calculate" data-config>▦ Oblicz koszt swojego zestawu ↗</button></div></section>
-<section class="section wrap faq-section"><div><div class="eyebrow">05 / WARTO WIEDZIEĆ</div><h2>Dobre pytania.<br><span class="serif">Proste odpowiedzi.</span></h2></div><div class="faq"><details open><summary>Za co płacę przy uruchomieniu?<span>+</span></summary><p>Opłata obejmuje standardową konfigurację pakietu, ustawienie uprawnień i wprowadzenie do obsługi. Import nietypowych danych i integracje wyceniamy osobno przed rozpoczęciem prac.</p></details><details><summary>Czy system jest już dostępny?<span>+</span></summary><p>Modulio to projekt na etapie przygotowania. Strona przedstawia docelową ofertę, a pokazywane panele korzystają z danych demonstracyjnych. Termin pilotażu i ostateczny zakres funkcji wymagają potwierdzenia.</p></details><details><summary>Czy mogę dobrać funkcje do swojej firmy?<span>+</span></summary><p>Tak. W konfiguratorze wybierzesz branżę, pakiet i dodatkowych użytkowników. Nietypowe procesy wymagają indywidualnego ustalenia zakresu.</p></details><details><summary>Czy potrzebuję specjalnego komputera?<span>+</span></summary><p>Planowany system ma działać w przeglądarce na komputerze, tablecie i telefonie. Dostęp do pracy z aktualnymi danymi będzie wymagał połączenia z internetem.</p></details><details><summary>Jak będzie wyglądała rezygnacja i eksport danych?<span>+</span></summary><p>Zakładamy abonament miesięczny oraz możliwość eksportu danych. Dokładny okres wypowiedzenia, zasady przechowywania i formaty eksportu zostaną opisane w umowie przed uruchomieniem usługi.</p></details></div></section>
-<section class="cta wrap"><div class="eyebrow">KOLEJNY ROZDZIAŁ TWOJEJ FIRMY</div><h2>Ty rozwijasz biznes.<br>My ogarniamy <span class="serif">resztę.</span></h2><button class="button dark" data-config>Ułóż swój zestaw ↗</button><p>Zacznij od konfiguracji. Bez płatności i zobowiązań.</p><div class="cta-symbol" aria-hidden="true">✳</div></section>
-</main><footer class="wrap"><div class="footer-top"><a class="logo" href="#"><span class="mark">m</span>modulio<span class="logo-dot">.</span></a><p>Oprogramowanie dopasowane do pracy.<br>Nie odwrotnie.</p><div><a href="#rozwiazania">Rozwiązania</a><a href="#cennik">Cennik</a><button class="text-button" data-config>Konfigurator ↗</button></div></div><div class="footer-bottom"><span>© 2026 Modulio. Projekt marki i oferty.</span><span>Stworzone z myślą o małych i średnich firmach.</span></div></footer>
-<dialog id="config-dialog"><div class="dialog-head"><span class="eyebrow">TWÓJ ZESTAW MODULIO</span><button class="close" aria-label="Zamknij konfigurator">×</button></div><h2>Policz swój <span class="serif">dobry start.</span></h2><p>Orientacyjna konfiguracja. Niczego nie zamawiasz.</p><div class="config-layout"><div class="config-fields"><label for="industry">Twoja branża</label><select id="industry"><option>Gastronomia</option><option>Usługi i serwis</option><option>Transport i przeprowadzki</option><option>Beauty & wellness</option><option>Handel</option></select><label for="plan">Pakiet</label><select id="plan"><option value="start">Start · 3 osoby / 1 moduł</option><option value="business" selected>Business · 10 osób / 3 moduły</option><option value="scale">Scale · 25 osób / 5 modułów</option></select><label for="extra">Dodatkowi użytkownicy <output id="extra-number">0</output></label><input type="range" id="extra" min="0" max="20" value="0"><small>15 zł netto / osoba / miesiąc ponad limit pakietu</small></div><div class="estimate" aria-live="polite"><span>MIESIĘCZNY ABONAMENT NETTO</span><strong id="monthly">199 zł</strong><div><span>Jednorazowe wdrożenie</span><b id="setup-cost">799 zł</b></div><div><span>Pierwszy miesiąc łącznie</span><b id="first-month">998 zł</b></div><div><span>Pierwsze 12 miesięcy</span><b id="year-cost">3 187 zł</b></div><p>Kwoty netto; nie obejmują niestandardowych prac ani integracji. To propozycja, nie wiążąca oferta.</p></div></div><button id="download" class="button coral">Pobierz podsumowanie ↓</button><span id="download-state" role="status"></span></dialog>
-<dialog id="detail-dialog"><div class="dialog-head"><span class="eyebrow">ROZWIĄZANIE BRANŻOWE</span><button class="close" aria-label="Zamknij szczegóły">×</button></div><div id="detail-content"></div><button class="button coral" id="detail-config">Sprawdź koszt tego rozwiązania ↗</button></dialog><script>
-const solutions=[
-{id:'gastro',category:'gastronomia',name:'Gastronomia',color:'#f7e4d5',status:'PIERWSZY ETAP',description:'Mniej arkuszy na zapleczu. Więcej kontroli nad kosztami, zakupami i pracą zespołu.',tags:['Koszty produktów','Grafik','Zapotrzebowanie'],window:'Zapotrzebowanie na dziś',rows:[['Filet z dorsza · 12 kg','Zamówione'],['Ziemniaki · 25 kg','Na liście'],['Olej · 10 l','Na liście']],features:['Lista zapotrzebowania i historia zakupów','Ceny produktów i koszt receptur','Planowanie grafiku oraz ewidencja czasu pracy','Raport kosztów dla właściciela'],industry:'Gastronomia'},
-{id:'service',category:'uslugi',name:'Usługi i serwis',color:'#e2ebe3',status:'PIERWSZY ETAP',description:'Od pierwszego telefonu do zamkniętego zlecenia. Zespół zawsze wie, co dalej.',tags:['Zlecenia','Kalendarz','Klienci'],window:'Zlecenia na ten tydzień',rows:[['Serwis klimatyzacji','W realizacji'],['Przegląd instalacji','Zaplanowane'],['Montaż urządzenia','Zakończone']],features:['Karta zlecenia z adresem, kwotą i historią','Kalendarz oraz przypisanie pracownika','Wycena i koszty bezpośrednie zlecenia','Role właściciela i pracownika'],industry:'Usługi i serwis'},
-{id:'transport',category:'pozostale',name:'Transport',color:'#e1e8f3',status:'PLAN ROZWOJU',description:'Wyceny, przeprowadzki i transporty pod kontrolą. Od planowania do rozliczenia.',tags:['Wyceny','Zlecenia','Koszty paliwa'],window:'Plan transportów',rows:[['Słupsk → Ustka','09:00'],['Przeprowadzka · ekipa 2','11:30'],['Transport mebli','14:00']],features:['Wycena według czasu, kilometrów i zespołu','Kalendarz zleceń i przypisanie pojazdu','Ewidencja kosztów paliwa i pracowników','Raport wyniku na zleceniu'],industry:'Transport i przeprowadzki'},
-{id:'beauty',category:'uslugi',name:'Beauty & wellness',color:'#eee3ee',status:'PLAN ROZWOJU',description:'Spokojniejszy dzień w salonie. Wizyty i grafik zespołu w jednej przestrzeni.',tags:['Wizyty','Grafik','Historia klienta'],window:'Dzisiaj w salonie',rows:[['10:00 · Konsultacja','Potwierdzona'],['11:30 · Pielęgnacja','Potwierdzona'],['13:00 · Stylizacja','Planowana']],features:['Kalendarz wizyt z przypisaniem specjalisty','Karta klienta i historia wizyt','Cennik usług i zestawienie wykonanej pracy','Przypomnienia jako osobno wyceniana integracja'],industry:'Beauty & wellness'},
-{id:'retail',category:'pozostale',name:'Handel',color:'#ece9dc',status:'PLAN ROZWOJU',description:'Wiesz, co jest na półce, czego brakuje i co warto zamówić. Bez zbędnego zgadywania.',tags:['Towary','Dostawy','Stany'],window:'Stan magazynu',rows:[['Produkt A · 42 szt.','Dostępny'],['Produkt B · 3 szt.','Niski stan'],['Produkt C · 18 szt.','Dostępny']],features:['Katalog produktów i podstawowe stany','Przyjęcia, wydania i historia zmian','Lista produktów do zamówienia','Eksport danych do pliku CSV'],industry:'Handel'}];
-const cards=document.querySelector('#solutions');
-function renderCards(filter='all'){cards.innerHTML=solutions.filter(s=>filter==='all'||s.category===filter).map(s=>`<article class="solution-card"><div class="card-art" style="--card:${s.color}"><div class="mini-window" aria-hidden="true"><div><b>${s.window}</b><span>•••</span></div>${s.rows.map(r=>`<div class="mini-row"><span>${r[0]}</span><span class="pill">${r[1]}</span></div>`).join('')}</div></div><div class="card-body"><div class="card-top"><h3>${s.name}</h3><span class="status">${s.status}</span></div><p>${s.description}</p><div class="card-tags">${s.tags.map(t=>`<span>${t}</span>`).join('')}</div><div class="card-bottom"><span>od <b>99 zł</b> / mies.</span><button data-detail="${s.id}" aria-label="Poznaj rozwiązanie: ${s.name}">Poznaj system ↗</button></div></div></article>`).join('');}
-renderCards();document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('selected',x===b);x.setAttribute('aria-pressed',x===b?'true':'false')});renderCards(b.dataset.filter)}));
-const modules={team:{title:'Twój zespół. Jeden plan.',intro:'Poniedziałek · 3 osoby w zespole',rows:[['AK','Anna Kowalska','Przygotowanie zamówień · 08:00–16:00','W pracy'],['MN','Marek Nowak','Obsługa klientów · 09:00–17:00','W pracy'],['KW','Karolina Wiśniewska','Zamknięcie dnia · 14:00–20:00','Zaplanowane']],footer:'Grafik i przypisane zadania — bez dodatkowych wiadomości.'},money:{title:'Wynik widoczny od razu.',intro:'Wrzesień · przykładowe zestawienie',rows:[['↗','Przychód','Suma zamkniętych zleceń','24 850 zł'],['−','Koszty bezpośrednie','Zakupy, materiały i praca','14 200 zł'],['=','Wynik przed kosztami stałymi','Przychód minus koszty bezpośrednie','10 650 zł']],footer:'Przykładowe dane operacyjne, nie raport księgowy.'},clients:{title:'Każde zlecenie ma historię.',intro:'Bieżące zlecenia · przykład dla firmy usługowej',rows:[['01','Montaż urządzenia','Anna Kowalska · dzisiaj, 10:00','W realizacji'],['02','Przegląd instalacji','Marek Nowak · jutro, 09:00','Planowane'],['03','Serwis klimatyzacji','Karolina Wiśniewska · wczoraj','Zakończone']],footer:'Adres, termin i osoba odpowiedzialna na jednej karcie.'}};
-function setModule(key){const m=modules[key];document.querySelectorAll('[data-module]').forEach(b=>{b.setAttribute('aria-selected',b.dataset.module===key?'true':'false');b.tabIndex=b.dataset.module===key?0:-1});const p=document.querySelector('#module-panel');p.setAttribute('aria-labelledby','tab-'+key);p.innerHTML=`<div class="preview-header"><b>${m.title}</b><span>DEMO</span></div><div class="preview-intro">${m.intro}</div>${m.rows.map(r=>`<div class="preview-row"><span class="preview-avatar">${r[0]}</span><div><b>${r[1]}</b><small>${r[2]}</small></div><span>${r[3]}</span></div>`).join('')}<div class="preview-footer">✓ ${m.footer}</div>`;}
-setModule('team');const tabs=[...document.querySelectorAll('[data-module]')];tabs.forEach((b,i)=>{b.addEventListener('click',()=>setModule(b.dataset.module));b.addEventListener('keydown',e=>{let n;if(e.key==='ArrowDown'||e.key==='ArrowRight')n=(i+1)%tabs.length;if(e.key==='ArrowUp'||e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;if(e.key==='Home')n=0;if(e.key==='End')n=tabs.length-1;if(n!==undefined){e.preventDefault();setModule(tabs[n].dataset.module);tabs[n].focus()}})});
-const plans={start:{name:'Start',monthly:99,setup:499,users:3,modules:1},business:{name:'Business',monthly:199,setup:799,users:10,modules:3},scale:{name:'Scale',monthly:349,setup:999,users:25,modules:5}};
-const config=document.querySelector('#config-dialog'),detail=document.querySelector('#detail-dialog');
-const money=n=>new Intl.NumberFormat('pl-PL').format(n)+' zł';
-function estimate(){const p=plans[document.querySelector('#plan').value],extra=Number(document.querySelector('#extra').value),monthly=p.monthly+extra*15;document.querySelector('#extra-number').textContent=extra;document.querySelector('#monthly').textContent=money(monthly);document.querySelector('#setup-cost').textContent=money(p.setup);document.querySelector('#first-month').textContent=money(p.setup+monthly);document.querySelector('#year-cost').textContent=money(p.setup+12*monthly);return {p,extra,monthly,industry:document.querySelector('#industry').value};}
-function openConfig(plan){if(plan)document.querySelector('#plan').value=plan;document.querySelector('#download-state').textContent='';estimate();config.showModal()}
-document.querySelectorAll('[data-config]').forEach(b=>b.addEventListener('click',()=>openConfig()));document.querySelectorAll('[data-plan]').forEach(b=>b.addEventListener('click',()=>openConfig(b.dataset.plan)));document.querySelectorAll('dialog .close').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));[config,detail].forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close()}}));document.querySelector('#plan').addEventListener('change',estimate);document.querySelector('#extra').addEventListener('input',estimate);
-let selectedIndustry='Gastronomia';cards.addEventListener('click',e=>{const b=e.target.closest('[data-detail]');if(!b)return;const s=solutions.find(x=>x.id===b.dataset.detail);selectedIndustry=s.industry;document.querySelector('#detail-content').innerHTML=`<h2>Modulio dla: <span class="serif">${s.name.toLowerCase()}</span></h2><p>${s.description}</p><b>Planowany zakres rozwiązania</b><ul>${s.features.map(f=>`<li>${f}</li>`).join('')}</ul><span class="concept-note">${s.status==='PIERWSZY ETAP'?'Kandydat do pierwszego pilotażu':'Rozwiązanie zaplanowane na kolejny etap'}. Funkcje nie są jeszcze usługą produkcyjną.</span>`;detail.showModal()});document.querySelector('#detail-config').addEventListener('click',()=>{detail.close();document.querySelector('#industry').value=selectedIndustry;openConfig()});
-document.querySelector('#download').addEventListener('click',()=>{const {p,extra,monthly,industry}=estimate();const content=`MODULIO — WSTĘPNA KONFIGURACJA\n\nBranża: ${industry}\nPakiet: ${p.name}\nLiczba użytkowników: ${p.users+extra}\nModuły w pakiecie: ${p.modules}\n\nAbonament miesięczny netto: ${money(monthly)}\nJednorazowe wdrożenie netto: ${money(p.setup)}\nPierwszy miesiąc łącznie netto: ${money(monthly+p.setup)}\nPierwsze 12 miesięcy netto: ${money(monthly*12+p.setup)}\n\nCena dodatkowej osoby: 15 zł netto miesięcznie.\nObliczenia zakładają ten sam pakiet przez 12 miesięcy.\nCeny nie obejmują integracji i niestandardowych prac.\n\nProjekt oferty przedpremierowej. Podsumowanie nie jest zamówieniem ani wiążącą ofertą i nie uruchamia płatności. Zakres wdrożenia, podatki, terminy i warunki wymagają potwierdzenia przed zawarciem umowy.\n`;const url=URL.createObjectURL(new Blob(['\ufeff'+content],{type:'text/plain;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='Modulio-konfiguracja.txt';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);document.querySelector('#download-state').textContent='Podsumowanie jest gotowe — rozpoczęto pobieranie pliku.'});
-const menu=document.querySelector('.menu-button');menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));document.querySelector('nav').classList.toggle('open',open)});document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>{menu.setAttribute('aria-expanded','false');document.querySelector('nav').classList.remove('open')}));estimate();
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-</script></body></html>
+  <style>
+    :root{
+      --bg:#f7f6f2;
+      --paper:#ffffff;
+      --ink:#16201c;
+      --muted:#66726c;
+      --line:#dfe4df;
+      --coral:#ff7758;
+      --coral-2:#ff9c83;
+      --green:#dce9e0;
+      --green-2:#bfd3c7;
+      --dark:#17221d;
+      --cream:#efe9dd;
+      --blue:#dfe8f4;
+      --violet:#eee4f1;
+      --yellow:#f2e6b8;
+      --shadow:0 24px 70px rgba(28,42,34,.09);
+      --radius:24px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:110px}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+    body.modal-open{overflow:hidden}
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font:inherit}
+    button{color:inherit}
+    img,svg{display:block}
+    h1,h2,h3,h4,p{margin:0}
+    h1,h2,h3,h4{font-family:'Manrope',sans-serif}
+    p{color:var(--muted);line-height:1.75}
+    ::selection{background:var(--coral);color:var(--ink)}
+
+    .wrap{width:min(1280px,calc(100% - 64px));margin-inline:auto}
+    .section{padding:120px 0}
+    .section-kicker{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;font-size:11px;font-weight:700;letter-spacing:1.7px;color:#596760}
+    .section-kicker:before{content:"";width:28px;height:2px;background:var(--coral)}
+    .section-title{font-size:clamp(38px,5.1vw,72px);line-height:1.02;letter-spacing:-3.8px;margin-top:20px;font-weight:700}
+    .serif{font-family:Georgia,'Times New Roman',serif;font-weight:400;font-style:italic}
+    .accent-underline{position:relative;z-index:0;white-space:nowrap}
+    .accent-underline:after{content:"";position:absolute;left:-3px;right:-4px;bottom:7px;height:14px;background:var(--coral);z-index:-1;transform:rotate(-1.6deg);border-radius:100% 0 100% 0}
+
+    .button{border:0;border-radius:14px;min-height:54px;padding:0 20px;display:inline-flex;align-items:center;justify-content:center;gap:11px;font-size:14px;font-weight:700;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+    .button:hover{transform:translateY(-3px)}
+    .button svg{width:18px;height:18px;stroke-width:1.9}
+    .button-dark{background:var(--dark);color:#fff;box-shadow:0 10px 25px rgba(22,32,28,.14)}
+    .button-dark:hover{background:#26362f}
+    .button-coral{background:var(--coral);color:var(--ink)}
+    .button-coral:hover{background:var(--coral-2)}
+    .button-light{background:#fff;border:1px solid var(--line)}
+    .button-ghost{background:transparent;border:1px solid #cbd4ce}
+    .button-small{min-height:44px;border-radius:12px;padding-inline:16px;font-size:13px}
+
+    .icon-box{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:#fff;border:1px solid rgba(31,45,37,.08);box-shadow:0 8px 22px rgba(25,36,31,.06)}
+    .icon-box svg{width:20px;height:20px;stroke-width:1.8}
+
+    /* HEADER */
+    .site-header-wrap{position:fixed;left:0;right:0;top:18px;z-index:1000;pointer-events:none}
+    .site-header{pointer-events:auto;width:min(1320px,calc(100% - 42px));margin:auto;height:72px;padding:8px 10px 8px 16px;border:1px solid rgba(207,215,210,.86);border-radius:20px;background:rgba(247,246,242,.78);backdrop-filter:blur(18px);display:flex;align-items:center;gap:28px;box-shadow:0 14px 45px rgba(28,42,34,.05);transition:background .25s,border-color .25s,transform .3s,box-shadow .3s}
+    .site-header.is-scrolled{background:rgba(255,255,255,.9);border-color:#d9dfdb;box-shadow:0 18px 55px rgba(28,42,34,.1)}
+    .brand{display:flex;align-items:center;gap:10px;font-size:25px;font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-1.4px;white-space:nowrap}
+    .brand-mark{width:38px;height:38px;background:var(--coral);border-radius:12px;display:grid;place-items:center;position:relative;overflow:hidden}
+    .brand-mark svg{width:22px;height:22px;stroke-width:2.3}
+    .brand-mark:after{content:"";position:absolute;width:34px;height:8px;background:rgba(255,255,255,.35);transform:rotate(-35deg);top:-8px;left:-12px;animation:brandShine 5s ease-in-out infinite}
+    @keyframes brandShine{0%,65%{transform:translate(-18px,-12px) rotate(-35deg)}80%,100%{transform:translate(55px,40px) rotate(-35deg)}}
+    .brand-dot{color:var(--coral)}
+    .nav{display:flex;align-items:center;gap:6px;margin:auto;position:relative}
+    .nav a{position:relative;z-index:2;padding:12px 14px;border-radius:12px;font-size:13px;font-weight:650;color:#425049;transition:color .2s}
+    .nav a:hover{color:var(--ink)}
+    .nav-indicator{position:absolute;z-index:1;height:40px;border-radius:11px;background:#ebece8;left:0;top:2px;width:0;opacity:0;transition:all .28s cubic-bezier(.2,.8,.2,1)}
+    .header-actions{display:flex;align-items:center;gap:8px}
+    .menu-toggle{display:none;width:44px;height:44px;border:0;border-radius:12px;background:#fff;place-items:center;cursor:pointer}
+    .menu-toggle svg{width:21px;height:21px}
+
+    /* HERO */
+    .hero{min-height:940px;padding-top:155px;padding-bottom:90px;position:relative}
+    .hero-grid{display:grid;grid-template-columns:.96fr 1.04fr;gap:70px;align-items:center}
+    .hero-copy{position:relative;z-index:3}
+    .hero-kicker{display:inline-flex;align-items:center;gap:12px;border:1px solid #d9dfdb;padding:8px 12px 8px 9px;border-radius:999px;background:rgba(255,255,255,.58);font-size:11px;font-weight:700;letter-spacing:1.25px;text-transform:uppercase;color:#58655e}
+    .hero-kicker .pulse{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--green)}
+    .hero-kicker .pulse:before{content:"";width:7px;height:7px;border-radius:50%;background:#6e917b;box-shadow:0 0 0 0 rgba(110,145,123,.35);animation:pulse 2.2s infinite}
+    @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(110,145,123,0)}100%{box-shadow:0 0 0 0 rgba(110,145,123,0)}}
+    .hero h1{font-size:clamp(58px,6.55vw,96px);line-height:.94;letter-spacing:-6.5px;font-weight:700;margin-top:30px;max-width:760px}
+    .hero h1 .line-alt{display:block;color:#68736e;font-family:Georgia,'Times New Roman',serif;font-weight:400;font-style:italic;letter-spacing:-5px}
+    .hero-copy>p{font-size:18px;max-width:590px;margin-top:31px;line-height:1.7}
+    .hero-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:34px}
+    .hero-proof{display:flex;align-items:center;gap:25px;flex-wrap:wrap;margin-top:32px;padding-top:28px;border-top:1px solid var(--line);max-width:620px}
+    .proof-item{display:flex;align-items:center;gap:9px;font-size:12px;color:#66736d}
+    .proof-item svg{width:17px;height:17px;stroke:var(--coral);stroke-width:2}
+
+    .hero-stage{position:relative;min-height:650px;display:grid;place-items:center;isolation:isolate}
+    .hero-stage:before{content:"";position:absolute;inset:5% 1% 0;background:radial-gradient(circle at 50% 40%,#fff 0,#f0f1ec 48%,transparent 70%);border-radius:50%;z-index:-3}
+    .orbit{position:absolute;border:1px dashed #cfd7d1;border-radius:50%;z-index:-2;animation:spin 30s linear infinite}
+    .orbit.o1{width:590px;height:590px}
+    .orbit.o2{width:455px;height:455px;animation-direction:reverse;animation-duration:24s}
+    .orbit.o3{width:335px;height:335px;animation-duration:19s}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .orbit-dot{position:absolute;top:50%;left:50%;width:13px;height:13px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 8px rgba(255,119,88,.12)}
+    .orbit.o1 .orbit-dot{transform:translate(285px,-50%)}
+    .orbit.o2 .orbit-dot{transform:translate(-235px,-50%);background:#789886;box-shadow:0 0 0 8px rgba(120,152,134,.12)}
+    .orbit.o3 .orbit-dot{transform:translate(160px,-50%);background:#8796ad;box-shadow:0 0 0 8px rgba(135,150,173,.12)}
+
+    .core-card{width:min(515px,88%);background:rgba(255,255,255,.95);border:1px solid #dfe5e1;border-radius:26px;box-shadow:var(--shadow);padding:25px;position:relative;z-index:4;transform:rotate(-1.2deg)}
+    .core-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ebefec;padding-bottom:20px}
+    .core-brand{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:700;color:#516059}
+    .core-brand .mini-m{width:27px;height:27px;border-radius:8px;background:var(--coral);display:grid;place-items:center}
+    .core-brand .mini-m svg{width:15px;height:15px}
+    .core-date{font-size:10px;color:#849089}
+    .core-greeting{padding:24px 0 18px}
+    .core-greeting span{font-size:10px;color:#849089;letter-spacing:1px}
+    .core-greeting h3{font-size:22px;letter-spacing:-.8px;margin-top:7px}
+    .core-stats{display:grid;grid-template-columns:1.25fr .9fr;gap:12px}
+    .stat-box{border:1px solid #e6ebe7;background:#fafbf9;border-radius:16px;padding:17px}
+    .stat-box small{font-size:10px;color:#7a877f}
+    .stat-box strong{display:block;font-family:'Manrope',sans-serif;font-size:28px;margin-top:8px;letter-spacing:-1px}
+    .stat-up{display:flex;align-items:center;gap:5px;font-size:9px;color:#63826f;margin-top:6px}
+    .stat-up svg{width:12px;height:12px}
+    .core-list{margin-top:15px;border:1px solid #e6ebe7;border-radius:16px;overflow:hidden}
+    .core-row{display:grid;grid-template-columns:36px 1fr auto;gap:10px;align-items:center;padding:12px 14px;border-bottom:1px solid #edf0ee}
+    .core-row:last-child{border-bottom:0}
+    .core-row .row-icon{width:32px;height:32px;border-radius:10px;background:var(--green);display:grid;place-items:center}
+    .core-row .row-icon svg{width:16px;height:16px}
+    .core-row b{font-size:11px;display:block}
+    .core-row span{font-size:9px;color:#8a958f;display:block;margin-top:3px}
+    .row-status{font-size:9px!important;color:#617c69!important;background:#e7f0e9;padding:5px 7px;border-radius:8px;white-space:nowrap}
+
+    .float-card{position:absolute;z-index:6;background:#fff;border:1px solid #e0e5e2;border-radius:18px;box-shadow:0 16px 40px rgba(27,42,34,.1);padding:13px 15px;display:flex;align-items:center;gap:11px;min-width:178px;will-change:transform}
+    .float-card b{font-size:11px;display:block}
+    .float-card span{font-size:9px;color:#7d8983;display:block;margin-top:4px}
+    .float-a{left:-7px;top:155px;transform:rotate(-6deg)}
+    .float-b{right:-4px;top:255px;transform:rotate(5deg)}
+    .float-c{left:25px;bottom:82px;transform:rotate(3deg)}
+    .float-card .icon-box{width:36px;height:36px;border-radius:11px;box-shadow:none}
+    .float-card .icon-box svg{width:17px;height:17px}
+    .float-a .icon-box{background:#fee5dd}
+    .float-b .icon-box{background:#e2ece6}
+    .float-c .icon-box{background:#e4eaf3}
+
+    .hero-bg-word{position:absolute;left:-1vw;right:-1vw;bottom:-45px;font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(120px,17vw,270px);letter-spacing:-15px;color:transparent;-webkit-text-stroke:1px #e2e5e1;line-height:.7;white-space:nowrap;z-index:-4;user-select:none;pointer-events:none}
+
+    /* VALUE STRIP */
+    .value-strip{border-block:1px solid var(--line);background:#f1f2ef;overflow:hidden}
+    .marquee{display:flex;width:max-content;animation:marquee 28s linear infinite}
+    .marquee-track{display:flex;align-items:center;gap:34px;padding:20px 17px}
+    .marquee-item{display:flex;align-items:center;gap:10px;white-space:nowrap;font-size:12px;font-weight:650;color:#53615a}
+    .marquee-item svg{width:17px;height:17px;stroke:var(--coral);stroke-width:1.8}
+    .marquee-sep{width:5px;height:5px;border-radius:50%;background:#9aa69f}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+
+    /* INDUSTRIES - completely new */
+    .solutions-intro{display:grid;grid-template-columns:1fr .72fr;gap:70px;align-items:end;margin-bottom:55px}
+    .solutions-intro p{max-width:520px;font-size:17px;padding-bottom:9px}
+    .industry-shell{display:grid;grid-template-columns:330px 1fr;background:#1b2722;border-radius:32px;overflow:hidden;min-height:620px;box-shadow:0 26px 70px rgba(20,30,25,.1)}
+    .industry-nav{padding:26px;background:#17221d;display:flex;flex-direction:column;gap:9px;border-right:1px solid rgba(255,255,255,.07)}
+    .industry-tab{border:0;background:transparent;color:#a9b2ad;border-radius:16px;padding:17px 16px;display:grid;grid-template-columns:38px 1fr auto;align-items:center;gap:12px;text-align:left;cursor:pointer;transition:background .25s,color .25s,transform .25s}
+    .industry-tab:hover{background:rgba(255,255,255,.04);color:#fff;transform:translateX(3px)}
+    .industry-tab.is-active{background:#fff;color:var(--ink)}
+    .industry-tab .tab-icon{width:38px;height:38px;border-radius:12px;border:1px solid rgba(255,255,255,.1);display:grid;place-items:center;background:rgba(255,255,255,.05)}
+    .industry-tab.is-active .tab-icon{background:#f2f3ef;border-color:#e3e6e2}
+    .industry-tab svg{width:18px;height:18px;stroke-width:1.8}
+    .industry-tab b{font-size:13px}
+    .industry-tab small{display:block;font-size:9px;margin-top:4px;color:#7f8b84;text-transform:uppercase;letter-spacing:.8px}
+    .industry-tab>svg{width:16px;height:16px}
+    .industry-preview{position:relative;background:#edf0ec;padding:38px;overflow:hidden}
+    .industry-preview:before{content:"";position:absolute;width:470px;height:470px;border-radius:50%;background:var(--preview-color,#f6dacc);right:-150px;top:-140px;filter:blur(1px)}
+    .industry-preview-inner{position:relative;z-index:2;height:100%;display:grid;grid-template-rows:auto 1fr auto}
+    .industry-preview-top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}
+    .industry-preview-top .meta{display:flex;gap:8px;flex-wrap:wrap}
+    .pill{font-size:9px;text-transform:uppercase;letter-spacing:1px;font-weight:700;padding:7px 9px;border:1px solid #d6ddd8;border-radius:999px;background:rgba(255,255,255,.65)}
+    .industry-preview h3{font-size:clamp(34px,4vw,58px);line-height:1.02;letter-spacing:-2.5px;margin-top:22px;max-width:650px}
+    .industry-preview .lead{max-width:630px;font-size:15px;margin-top:18px}
+    .industry-board{align-self:center;margin:35px 0;background:rgba(255,255,255,.93);border:1px solid rgba(216,224,219,.9);border-radius:22px;padding:21px;box-shadow:0 18px 50px rgba(27,41,34,.09);transform:rotate(-1deg)}
+    .board-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+    .board-head b{font-size:12px}
+    .board-head span{font-size:9px;color:#85918b}
+    .board-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .board-item{border:1px solid #e8ece9;border-radius:14px;padding:14px;background:#fbfcfa}
+    .board-item .board-icon{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;background:var(--green);margin-bottom:12px}
+    .board-item svg{width:16px;height:16px}
+    .board-item b{font-size:11px;display:block}
+    .board-item span{font-size:9px;color:#849089;display:block;margin-top:4px;line-height:1.5}
+    .industry-foot{display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap}
+    .industry-features{display:flex;gap:9px;flex-wrap:wrap}
+    .industry-features span{background:rgba(255,255,255,.7);border:1px solid #d8dedb;border-radius:10px;padding:9px 11px;font-size:10px;color:#5d6a63}
+
+    /* PLATFORM - redesigned */
+    .platform-section{background:#dfe9e2;position:relative;overflow:hidden}
+    .platform-section:before{content:"";position:absolute;width:640px;height:640px;border-radius:50%;border:1px dashed rgba(82,109,94,.22);right:-160px;top:80px}
+    .platform-head{display:grid;grid-template-columns:1fr .78fr;gap:70px;align-items:end;position:relative;z-index:2}
+    .platform-head p{font-size:17px;max-width:500px;padding-bottom:9px}
+    .platform-flow{margin-top:65px;display:grid;grid-template-columns:1fr 380px;gap:26px;position:relative;z-index:2}
+    .process-canvas{background:#f7f8f5;border:1px solid #ccd8d0;border-radius:28px;padding:30px;min-height:560px;position:relative;overflow:hidden}
+    .canvas-label{display:flex;justify-content:space-between;align-items:center;font-size:10px;color:#7a8880;text-transform:uppercase;letter-spacing:1.2px}
+    .canvas-label .live{display:flex;align-items:center;gap:7px}
+    .canvas-label .live:before{content:"";width:7px;height:7px;border-radius:50%;background:#76a184;box-shadow:0 0 0 5px rgba(118,161,132,.12)}
+    .flow-line{position:absolute;left:50%;top:120px;bottom:60px;width:1px;background:linear-gradient(to bottom,transparent,#bdc9c1 8%,#bdc9c1 92%,transparent)}
+    .flow-step{position:relative;width:46%;background:#fff;border:1px solid #dfe5e1;border-radius:18px;padding:17px;margin-top:28px;box-shadow:0 11px 30px rgba(36,50,42,.05)}
+    .flow-step:nth-of-type(even){margin-left:54%}
+    .flow-step:nth-of-type(odd){margin-left:0}
+    .flow-step:after{content:"";position:absolute;top:50%;width:10%;height:1px;background:#cbd5cf}
+    .flow-step:nth-of-type(odd):after{left:100%}
+    .flow-step:nth-of-type(even):after{right:100%}
+    .flow-step .step-top{display:flex;align-items:center;gap:10px}
+    .flow-step .step-icon{width:35px;height:35px;border-radius:11px;display:grid;place-items:center;background:#edf1ed}
+    .flow-step .step-icon svg{width:17px;height:17px}
+    .flow-step b{font-size:12px}
+    .flow-step p{font-size:10px;margin-top:7px;line-height:1.55}
+    .flow-step.active{border-color:#ffb7a4;box-shadow:0 13px 30px rgba(255,119,88,.11)}
+    .flow-step.active .step-icon{background:#ffe5dd}
+    .platform-control{background:#18241f;color:#fff;border-radius:28px;padding:27px;display:flex;flex-direction:column;min-height:560px}
+    .platform-control .control-kicker{font-size:9px;letter-spacing:1.3px;text-transform:uppercase;color:#91a098}
+    .platform-control h3{font-size:29px;line-height:1.08;letter-spacing:-1.4px;margin-top:16px}
+    .platform-control>p{font-size:12px;color:#a6b0aa;margin-top:13px}
+    .module-list{margin-top:26px;display:flex;flex-direction:column;gap:8px}
+    .module-button{border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);border-radius:15px;color:#b9c2bd;padding:14px;display:grid;grid-template-columns:34px 1fr auto;gap:11px;align-items:center;text-align:left;cursor:pointer;transition:.25s}
+    .module-button:hover,.module-button.active{background:#fff;color:var(--ink);transform:translateX(-5px)}
+    .module-button .module-icon{width:34px;height:34px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center}
+    .module-button.active .module-icon{background:#eff2ef}
+    .module-button svg{width:16px;height:16px}
+    .module-button b{font-size:11px}
+    .module-button small{display:block;font-size:9px;margin-top:3px;color:#7d8a83}
+    .platform-control .button{margin-top:auto;width:100%}
+
+    /* CUSTOM SOFTWARE */
+    .custom-software{padding:120px 0;background:#f2ece3}
+    .custom-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+    .custom-copy p{font-size:17px;max-width:550px;margin-top:26px}
+    .custom-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:34px}
+    .custom-point{background:rgba(255,255,255,.58);border:1px solid rgba(210,204,193,.8);border-radius:17px;padding:16px;display:flex;align-items:flex-start;gap:11px}
+    .custom-point svg{width:18px;height:18px;stroke:var(--coral);margin-top:2px;flex:0 0 auto}
+    .custom-point b{display:block;font-size:12px}
+    .custom-point span{display:block;font-size:10px;color:#7c766e;margin-top:5px;line-height:1.55}
+    .custom-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:32px}
+    .blueprint{background:#1a2420;border-radius:30px;padding:28px;color:#fff;min-height:560px;position:relative;overflow:hidden;box-shadow:0 28px 60px rgba(31,35,33,.15)}
+    .blueprint:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:30px 30px;mask-image:linear-gradient(to bottom,#000,transparent 95%)}
+    .blueprint-head{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center}
+    .blueprint-head span{font-size:9px;color:#9dab9f;letter-spacing:1.3px;text-transform:uppercase}
+    .blueprint-head .bp-dot{width:9px;height:9px;background:var(--coral);border-radius:50%;box-shadow:0 0 0 6px rgba(255,119,88,.12)}
+    .blueprint-diagram{position:relative;z-index:2;margin-top:40px;height:410px}
+    .bp-node{position:absolute;background:#fff;color:var(--ink);border-radius:17px;padding:14px;width:170px;box-shadow:0 14px 35px rgba(0,0,0,.12)}
+    .bp-node .bp-icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:#edf0ed}
+    .bp-node svg{width:17px;height:17px}
+    .bp-node b{font-size:11px;display:block;margin-top:11px}
+    .bp-node span{display:block;font-size:9px;color:#78847e;line-height:1.5;margin-top:5px}
+    .bp-a{left:5%;top:12%}.bp-b{right:4%;top:19%}.bp-c{left:15%;bottom:3%}.bp-d{right:13%;bottom:0}.bp-core{left:50%;top:50%;transform:translate(-50%,-50%);width:190px;background:var(--coral)}
+    .bp-core .bp-icon{background:rgba(255,255,255,.38)}
+    .bp-line{position:absolute;height:1px;background:rgba(255,255,255,.23);transform-origin:left center}
+    .bp-l1{left:30%;top:35%;width:25%;transform:rotate(21deg)}
+    .bp-l2{left:52%;top:44%;width:23%;transform:rotate(-22deg)}
+    .bp-l3{left:31%;top:70%;width:25%;transform:rotate(-19deg)}
+    .bp-l4{left:54%;top:65%;width:22%;transform:rotate(20deg)}
+
+    /* PROCESS */
+    .process-head{display:grid;grid-template-columns:1fr .72fr;gap:70px;align-items:end}
+    .process-head p{font-size:17px;padding-bottom:10px}
+    .steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:55px}
+    .step-card{min-height:315px;border:1px solid var(--line);background:#fff;border-radius:22px;padding:24px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+    .step-card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+    .step-no{font-size:11px;color:#7c8982;letter-spacing:1px}
+    .step-card .step-icon{width:48px;height:48px;border-radius:15px;background:#f1f3ef;display:grid;place-items:center;margin-top:53px}
+    .step-card .step-icon svg{width:21px;height:21px}
+    .step-card h3{font-size:20px;letter-spacing:-.6px;margin-top:22px}
+    .step-card p{font-size:13px;margin-top:10px}
+    .step-card:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;background:var(--step-color,#f7dcd4);right:-55px;top:-55px;opacity:.8}
+
+    /* OFFER / no payments */
+    .offer-section{background:#eff1f1}
+    .offer-head{text-align:center;max-width:820px;margin:auto}
+    .offer-head .section-kicker{justify-content:center}
+    .offer-head p{font-size:16px;margin-top:20px}
+    .offer-note{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #dde2df;border-radius:999px;padding:9px 13px;margin-top:20px;font-size:10px;color:#64716a}
+    .offer-note svg{width:15px;height:15px;stroke:var(--coral)}
+    .offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
+    .offer-card{background:#fff;border:1px solid #dce2de;border-radius:24px;padding:28px;display:flex;flex-direction:column;min-height:485px;position:relative;overflow:hidden}
+    .offer-card.featured{background:#ffe3da;border-color:#ffc4b3}
+    .offer-card .offer-icon{width:45px;height:45px;border-radius:14px;display:grid;place-items:center;background:#f1f3ef}
+    .offer-card.featured .offer-icon{background:rgba(255,255,255,.65)}
+    .offer-card .offer-icon svg{width:20px;height:20px}
+    .offer-card h3{font-size:27px;letter-spacing:-1px;margin-top:23px}
+    .offer-card>p{font-size:12px;margin-top:8px;min-height:58px}
+    .offer-card .price{font-family:'Manrope',sans-serif;font-weight:700;font-size:44px;letter-spacing:-2px;margin-top:14px}
+    .offer-card .price span{font-family:'DM Sans',sans-serif;font-size:11px;color:#707b75;letter-spacing:0;font-weight:500}
+    .offer-card .setup{font-size:10px;color:#79847e;margin-top:6px}
+    .offer-card ul{padding:0;margin:24px 0 26px;list-style:none;display:flex;flex-direction:column;gap:13px}
+    .offer-card li{display:flex;gap:9px;font-size:11px;color:#56635c;line-height:1.45}
+    .offer-card li svg{width:15px;height:15px;stroke:#678373;flex:0 0 auto;margin-top:1px}
+    .offer-card .button{margin-top:auto;width:100%}
+    .contact-only{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:25px;font-size:11px;color:#68736d}
+    .contact-only svg{width:16px;height:16px;stroke:var(--coral)}
+
+    /* CONTACT */
+    .contact-section{padding:120px 0 90px}
+    .contact-shell{background:#18231e;border-radius:34px;color:#fff;display:grid;grid-template-columns:.88fr 1.12fr;overflow:hidden}
+    .contact-copy{padding:54px;position:relative;overflow:hidden}
+    .contact-copy:after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;border:1px dashed rgba(255,255,255,.13);left:-190px;bottom:-210px}
+    .contact-copy .section-kicker{color:#9ca9a2}
+    .contact-copy h2{font-size:clamp(42px,5vw,68px);line-height:1.03;letter-spacing:-3.3px;margin-top:22px}
+    .contact-copy>p{color:#aab4af;font-size:15px;margin-top:22px;max-width:500px}
+    .contact-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+    .contact-chips span{border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:8px 10px;font-size:9px;color:#aab4af;display:flex;align-items:center;gap:7px}
+    .contact-chips svg{width:13px;height:13px;stroke:var(--coral)}
+    .contact-form-wrap{background:#f6f7f4;color:var(--ink);padding:36px}
+    .contact-form-head{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:24px}
+    .contact-form-head h3{font-size:24px;letter-spacing:-.8px}
+    .contact-form-head span{font-size:9px;color:#7a8780;text-transform:uppercase;letter-spacing:1.1px}
+    .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .field{display:flex;flex-direction:column;gap:7px}
+    .field.full{grid-column:1/-1}
+    .field label{font-size:10px;color:#647169;font-weight:700}
+    .field input,.field select,.field textarea{width:100%;border:1px solid #d6ddd8;background:#fff;border-radius:12px;padding:13px 14px;color:var(--ink);outline:none;transition:border-color .2s,box-shadow .2s}
+    .field textarea{min-height:125px;resize:vertical}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:#9daf9f;box-shadow:0 0 0 4px rgba(157,175,159,.12)}
+    .form-bottom{display:flex;gap:15px;justify-content:space-between;align-items:center;margin-top:17px}
+    .form-bottom p{font-size:9px;line-height:1.5;max-width:330px}
+    .form-status{font-size:11px;margin-top:12px;color:#5e7668;min-height:16px}
+
+    /* FAQ */
+    .faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px}
+    .faq-list details{border-bottom:1px solid var(--line);padding:22px 0}
+    .faq-list details:first-child{padding-top:0}
+    .faq-list summary{list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:center;font-weight:700;font-size:14px;cursor:pointer}
+    .faq-list summary::-webkit-details-marker{display:none}
+    .faq-list summary .faq-plus{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid var(--line);transition:transform .25s}
+    .faq-list summary .faq-plus svg{width:15px;height:15px}
+    .faq-list details[open] summary .faq-plus{transform:rotate(45deg)}
+    .faq-list details p{font-size:13px;margin-top:14px;padding-right:50px}
+
+    /* FOOTER */
+    footer{padding:35px 0 30px;border-top:1px solid var(--line)}
+    .footer-top{display:flex;align-items:center;gap:35px}
+    .footer-top>p{font-size:11px}
+    .footer-links{display:flex;gap:22px;margin-left:auto;font-size:11px;color:#637069}
+    .footer-links a:hover{color:var(--ink)}
+    .footer-bottom{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:20px;margin-top:30px;font-size:10px;color:#87918c}
+
+    /* CONFIGURATOR */
+    .modal{position:fixed;inset:0;background:rgba(16,28,22,.62);backdrop-filter:blur(8px);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px}
+    .modal.is-open{display:flex}
+    .configurator{width:min(1080px,100%);max-height:min(900px,94dvh);background:#f7f7f4;border-radius:28px;overflow:hidden;box-shadow:0 30px 100px rgba(0,0,0,.25);display:grid;grid-template-columns:320px 1fr}
+    .config-side{background:#18231e;color:#fff;padding:30px;display:flex;flex-direction:column}
+    .config-side .brand{font-size:22px}
+    .config-side .brand-mark{width:34px;height:34px}
+    .config-side p{font-size:11px;color:#9da9a2;margin-top:18px}
+    .config-progress{margin-top:34px;display:flex;flex-direction:column;gap:11px}
+    .progress-step{display:flex;gap:12px;align-items:center;color:#819087;font-size:11px}
+    .progress-step .dot{width:26px;height:26px;border-radius:50%;border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;font-size:9px}
+    .progress-step.active{color:#fff}
+    .progress-step.active .dot{background:var(--coral);border-color:var(--coral);color:var(--ink)}
+    .progress-step.done .dot{background:#33463d;color:#a6c2af;border-color:#43584e}
+    .config-side-note{margin-top:auto;padding-top:25px;border-top:1px solid rgba(255,255,255,.08);font-size:9px!important;line-height:1.6!important}
+    .config-main{padding:32px;overflow-y:auto}
+    .config-top{display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .config-top span{font-size:9px;text-transform:uppercase;letter-spacing:1.2px;color:#7a8780}
+    .modal-close{border:1px solid #d7ded9;background:#fff;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;cursor:pointer}
+    .modal-close svg{width:18px;height:18px}
+    .config-step{display:none;padding-top:25px}
+    .config-step.active{display:block}
+    .config-step h3{font-size:31px;letter-spacing:-1.4px}
+    .config-step>p{font-size:12px;margin-top:9px;max-width:620px}
+    .choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:24px}
+    .choice{border:1px solid #d9e0db;background:#fff;border-radius:16px;padding:15px;display:flex;gap:11px;align-items:flex-start;cursor:pointer;transition:.2s;text-align:left}
+    .choice:hover{transform:translateY(-2px);border-color:#bfcac3}
+    .choice input{margin-top:4px;accent-color:var(--coral)}
+    .choice b{font-size:12px;display:block}
+    .choice span{font-size:10px;color:#7b8780;line-height:1.5;display:block;margin-top:4px}
+    .config-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+    .config-fields .field.full{grid-column:1/-1}
+    .range-wrap{background:#fff;border:1px solid #d9e0db;border-radius:16px;padding:16px;margin-top:18px}
+    .range-head{display:flex;justify-content:space-between;gap:15px;font-size:11px;font-weight:700}
+    input[type=range]{width:100%;accent-color:var(--coral);margin-top:15px}
+    .summary-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:15px;margin-top:24px}
+    .summary-card{background:#fff;border:1px solid #dbe1dd;border-radius:18px;padding:18px}
+    .summary-card h4{font-size:13px;margin-bottom:13px}
+    .summary-list{display:flex;flex-direction:column;gap:10px}
+    .summary-row{display:flex;justify-content:space-between;gap:20px;font-size:10px;padding-bottom:9px;border-bottom:1px solid #edf0ee}
+    .summary-row:last-child{border-bottom:0;padding-bottom:0}
+    .summary-row span{color:#7a8780}
+    .estimate-card{background:#e4ede7;border:1px solid #cbd9d0;border-radius:18px;padding:18px}
+    .estimate-card>span{font-size:9px;text-transform:uppercase;letter-spacing:1.1px;color:#65756c}
+    .estimate-card strong{display:block;font-size:36px;letter-spacing:-1.6px;margin-top:8px}
+    .estimate-card p{font-size:9px;margin-top:12px}
+    .config-nav{display:flex;justify-content:space-between;gap:10px;margin-top:28px;padding-top:20px;border-top:1px solid #e0e5e1}
+    .config-nav .button{min-width:130px}
+
+    @media(max-width:1100px){
+      .wrap{width:min(100% - 44px,1280px)}
+      .hero-grid{grid-template-columns:1fr 1fr;gap:35px}
+      .hero h1{font-size:72px;letter-spacing:-5px}
+      .hero-stage{min-height:590px}
+      .orbit.o1{width:520px;height:520px}.orbit.o2{width:405px;height:405px}.orbit.o3{width:305px;height:305px}
+      .orbit.o1 .orbit-dot{transform:translate(250px,-50%)}.orbit.o2 .orbit-dot{transform:translate(-208px,-50%)}.orbit.o3 .orbit-dot{transform:translate(145px,-50%)}
+      .industry-shell{grid-template-columns:285px 1fr}
+      .platform-flow{grid-template-columns:1fr 340px}
+      .steps-grid{grid-template-columns:repeat(2,1fr)}
+      .contact-copy{padding:40px}.contact-form-wrap{padding:30px}
+    }
+
+    @media(max-width:900px){
+      .site-header{width:calc(100% - 28px);top:12px;height:64px;border-radius:18px}
+      .nav{position:fixed;top:84px;left:14px;right:14px;display:none;flex-direction:column;align-items:stretch;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:0 20px 50px rgba(20,35,27,.12)}
+      .nav.open{display:flex}
+      .nav a{padding:14px}
+      .nav-indicator{display:none}
+      .header-actions .button-light{display:none}
+      .menu-toggle{display:grid}
+      .hero{min-height:auto;padding-top:130px}
+      .hero-grid{grid-template-columns:1fr;gap:45px}
+      .hero-copy{text-align:center}
+      .hero-kicker{margin:auto}
+      .hero h1{max-width:760px;margin-inline:auto;font-size:clamp(56px,10vw,86px)}
+      .hero-copy>p{margin-inline:auto}
+      .hero-actions,.hero-proof{justify-content:center;margin-inline:auto}
+      .hero-stage{min-height:610px}
+      .hero-bg-word{bottom:-20px}
+      .solutions-intro,.platform-head,.custom-grid,.process-head,.faq-grid{grid-template-columns:1fr;gap:28px}
+      .industry-shell{grid-template-columns:1fr;min-height:0}
+      .industry-nav{display:grid;grid-template-columns:repeat(5,1fr);overflow-x:auto;padding:12px}
+      .industry-tab{grid-template-columns:1fr;justify-items:center;text-align:center;padding:12px 8px;min-width:112px}
+      .industry-tab>svg{display:none}
+      .industry-tab small{display:none}
+      .industry-preview{padding:30px}
+      .platform-flow{grid-template-columns:1fr;gap:18px}
+      .platform-control{min-height:430px}
+      .module-list{display:grid;grid-template-columns:1fr 1fr}
+      .module-button:hover,.module-button.active{transform:none}
+      .custom-grid{gap:45px}
+      .blueprint{max-width:680px;width:100%;margin:auto}
+      .offer-grid{grid-template-columns:1fr;max-width:560px;margin:45px auto 0}
+      .offer-card{min-height:auto}
+      .contact-shell{grid-template-columns:1fr}
+      .configurator{grid-template-columns:1fr;max-height:95dvh}
+      .config-side{display:none}
+    }
+
+    @media(max-width:620px){
+      .wrap{width:calc(100% - 32px)}
+      .section{padding:82px 0}
+      .site-header{padding-left:10px;gap:10px}
+      .brand{font-size:21px}.brand-mark{width:35px;height:35px}
+      .header-actions .button-dark{display:none}
+      .hero{padding-top:112px;padding-bottom:60px}
+      .hero h1{font-size:53px;letter-spacing:-3.6px;line-height:.98}
+      .hero h1 .line-alt{letter-spacing:-3px}
+      .hero-copy>p{font-size:15px}
+      .hero-actions{flex-direction:column;align-items:stretch;max-width:380px}
+      .hero-actions .button{width:100%}
+      .hero-proof{gap:13px;flex-direction:column;align-items:center}
+      .hero-stage{min-height:490px;margin-top:10px}
+      .orbit.o1{width:405px;height:405px}.orbit.o2{width:320px;height:320px}.orbit.o3{width:245px;height:245px}
+      .orbit.o1 .orbit-dot{transform:translate(196px,-50%)}.orbit.o2 .orbit-dot{transform:translate(-164px,-50%)}.orbit.o3 .orbit-dot{transform:translate(117px,-50%)}
+      .core-card{width:94%;padding:16px;border-radius:20px}
+      .core-greeting{padding:18px 0 14px}.core-greeting h3{font-size:17px}
+      .core-stats{gap:8px}.stat-box{padding:12px}.stat-box strong{font-size:22px}
+      .core-row{padding:9px}.core-row .row-icon{width:28px;height:28px}.core-row b{font-size:10px}.core-row span{font-size:8px}
+      .float-card{padding:10px 11px;min-width:145px}.float-card b{font-size:9px}.float-card span{font-size:8px}.float-card .icon-box{width:30px;height:30px}
+      .float-a{left:-4px;top:115px}.float-b{right:-6px;top:205px}.float-c{left:5px;bottom:45px}
+      .section-title{font-size:43px;letter-spacing:-2.4px}
+      .solutions-intro p,.platform-head p,.process-head p,.custom-copy p{font-size:15px}
+      .industry-nav{grid-template-columns:repeat(5,112px)}
+      .industry-preview{padding:22px}
+      .industry-preview h3{font-size:38px;letter-spacing:-1.8px}
+      .industry-preview .lead{font-size:13px}
+      .board-grid{grid-template-columns:1fr;gap:7px}.board-item{display:grid;grid-template-columns:32px 1fr;column-gap:10px}.board-item .board-icon{grid-row:1/3;margin:0}.board-item span{margin-top:1px}
+      .industry-foot{align-items:flex-start;flex-direction:column}
+      .process-canvas{padding:20px;min-height:525px}
+      .flow-step{width:47%;padding:12px}.flow-step:nth-of-type(even){margin-left:53%}.flow-step p{font-size:9px}.flow-step b{font-size:10px}
+      .platform-control{padding:22px}.module-list{grid-template-columns:1fr}
+      .custom-points{grid-template-columns:1fr}
+      .blueprint{min-height:500px;padding:20px}.blueprint-diagram{height:385px}.bp-node{width:132px;padding:10px}.bp-node b{font-size:9px}.bp-node span{font-size:8px}.bp-core{width:145px}.bp-a{left:0}.bp-b{right:0}.bp-c{left:4%}.bp-d{right:3%}
+      .steps-grid{grid-template-columns:1fr}.step-card{min-height:260px}.step-card .step-icon{margin-top:35px}
+      .contact-copy,.contact-form-wrap{padding:26px}.contact-copy h2{font-size:46px;letter-spacing:-2.3px}
+      .field-grid,.config-fields,.choice-grid,.summary-grid{grid-template-columns:1fr}
+      .field.full,.config-fields .field.full{grid-column:auto}
+      .form-bottom{align-items:stretch;flex-direction:column}.form-bottom .button{width:100%}
+      .faq-list details p{padding-right:0}
+      .footer-top{align-items:flex-start;flex-direction:column}.footer-links{margin-left:0;flex-wrap:wrap}.footer-bottom{flex-direction:column}
+      .config-main{padding:22px}.config-step h3{font-size:27px}.config-nav .button{min-width:0;flex:1}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    }
+  </style>
+</head>
+<body>
+  <div class="site-header-wrap">
+    <header class="site-header" id="site-header">
+      <a class="brand" href="#top" aria-label="Modulio — strona główna">
+        <span class="brand-mark"><i data-lucide="blocks"></i></span>
+        modulio<span class="brand-dot">.</span>
+      </a>
+
+      <nav class="nav" id="main-nav" aria-label="Główna nawigacja">
+        <span class="nav-indicator" aria-hidden="true"></span>
+        <a href="#rozwiazania">Rozwiązania</a>
+        <a href="#platforma">Platforma</a>
+        <a href="#dedykowane">Dedykowane</a>
+        <a href="#proces">Jak działamy</a>
+        <a href="#oferta">Oferta</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="button button-light button-small" data-open-contact><i data-lucide="message-square"></i> Porozmawiajmy</button>
+        <button class="button button-dark button-small" data-open-config><i data-lucide="sliders-horizontal"></i> Konfigurator</button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Otwórz menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+      </div>
+    </header>
+  </div>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="hero-kicker"><span class="pulse"></span> SYSTEM DOPASOWANY DO TWOJEJ FIRMY</div>
+          <h1>
+            Firma działa po Twojemu.
+            <span class="line-alt">Oprogramowanie też powinno.</span>
+          </h1>
+          <p>Modulio łączy procesy, zespół, klientów, koszty i dane w jednym miejscu. Wybierasz gotowe moduły albo budujemy dla Ciebie system od podstaw.</p>
+
+          <div class="hero-actions">
+            <button class="button button-coral" data-open-config><i data-lucide="wand-sparkles"></i> Zbuduj swój system <i data-lucide="arrow-up-right"></i></button>
+            <button class="button button-ghost" data-open-contact><i data-lucide="messages-square"></i> Omów projekt</button>
+          </div>
+
+          <div class="hero-proof">
+            <div class="proof-item"><i data-lucide="check-circle-2"></i> Bez zakupu online</div>
+            <div class="proof-item"><i data-lucide="check-circle-2"></i> Wycena po rozmowie</div>
+            <div class="proof-item"><i data-lucide="check-circle-2"></i> Gotowe moduły lub projekt dedykowany</div>
+          </div>
+        </div>
+
+        <div class="hero-stage" aria-label="Animowana wizualizacja systemu Modulio">
+          <div class="orbit o1"><span class="orbit-dot"></span></div>
+          <div class="orbit o2"><span class="orbit-dot"></span></div>
+          <div class="orbit o3"><span class="orbit-dot"></span></div>
+
+          <div class="core-card">
+            <div class="core-head">
+              <div class="core-brand"><span class="mini-m"><i data-lucide="blocks"></i></span> Modulio Workspace</div>
+              <span class="core-date">PODGLĄD SYSTEMU</span>
+            </div>
+            <div class="core-greeting">
+              <span>ŚRODA · 9 WRZEŚNIA</span>
+              <h3>Najważniejsze rzeczy. W jednym miejscu.</h3>
+            </div>
+            <div class="core-stats">
+              <div class="stat-box">
+                <small>Wynik operacyjny · miesiąc</small>
+                <strong>31 420 zł</strong>
+                <div class="stat-up"><i data-lucide="trending-up"></i> +14,2% vs poprzedni miesiąc</div>
+              </div>
+              <div class="stat-box">
+                <small>Otwarte zadania</small>
+                <strong>18</strong>
+                <div class="stat-up"><i data-lucide="circle-check"></i> 7 zamkniętych dziś</div>
+              </div>
+            </div>
+            <div class="core-list">
+              <div class="core-row">
+                <div class="row-icon"><i data-lucide="clipboard-list"></i></div>
+                <div><b>Zlecenie #M-1048</b><span>Przypisane do zespołu terenowego</span></div>
+                <span class="row-status">W realizacji</span>
+              </div>
+              <div class="core-row">
+                <div class="row-icon"><i data-lucide="wallet-cards"></i></div>
+                <div><b>Koszty tygodnia</b><span>Paliwo, zakupy, robocizna i materiały</span></div>
+                <span class="row-status">Zaktualizowane</span>
+              </div>
+              <div class="core-row">
+                <div class="row-icon"><i data-lucide="users-round"></i></div>
+                <div><b>Grafik zespołu</b><span>4 osoby pracują · 2 zadania oczekują</span></div>
+                <span class="row-status">Dzisiaj</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-card float-a">
+            <span class="icon-box"><i data-lucide="route"></i></span>
+            <div><b>Procesy</b><span>Od zapytania do realizacji</span></div>
+          </div>
+          <div class="float-card float-b">
+            <span class="icon-box"><i data-lucide="chart-no-axes-combined"></i></span>
+            <div><b>Dane i wyniki</b><span>Decyzje oparte na liczbach</span></div>
+          </div>
+          <div class="float-card float-c">
+            <span class="icon-box"><i data-lucide="workflow"></i></span>
+            <div><b>Automatyzacje</b><span>Mniej ręcznego klikania</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bg-word" aria-hidden="true">MODULIO</div>
+    </section>
+
+    <div class="value-strip" aria-hidden="true">
+      <div class="marquee">
+        <div class="marquee-track">
+          <span class="marquee-item"><i data-lucide="briefcase-business"></i> ZLECENIA</span><span class="marquee-sep"></span>
+          <span class="marquee-item"><i data-lucide="calendar-days"></i> KALENDARZ</span><span class="marquee-sep"></span>
+          <span class="marquee-item"><i data-lucide="users"></i> ZESPÓŁ</span><span class="marquee-sep"></span>
+          <span class="marquee-item"><i data-lucide="package-search"></i> MAGAZYN</span><span class="marquee-sep"></span>
+          <span class="marquee-item"><i data-lucide="chart-column-big"></i> RAPORTY</span><span class="marquee-sep"></span>
+          <span class="marquee-item"><i data-lucide="contact-round"></i> KLIENCI</span><span class="marquee-sep"></span>
+          <span class="marquee-item"><i data-lucide="cog"></i> AUTOMATYZACJE</span><span class="marquee-sep"></span>
+        </div>
+        <div class="marquee-track">
+          <span class="marquee-item"><i data-lucide="briefcase-business"></i> ZLECENIA</span><span class="marquee-sep"></span>
+          <span class="marquee-item"><i data-lucide="calendar-days"></i> KALENDARZ</span><span class="marquee-sep"></span>
+          <span class="marquee-item"><i data-lucide="users"></i> ZESPÓŁ</span><span class="marquee-sep"></span>
+          <span class="marquee-item"><i data-lucide="package-search"></i> MAGAZYN</span><span class="marquee-sep"></span>
+          <span class="marquee-item"><i data-lucide="chart-column-big"></i> RAPORTY</span><span class="marquee-sep"></span>
+          <span class="marquee-item"><i data-lucide="contact-round"></i> KLIENCI</span><span class="marquee-sep"></span>
+          <span class="marquee-item"><i data-lucide="cog"></i> AUTOMATYZACJE</span><span class="marquee-sep"></span>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="rozwiazania">
+      <div class="wrap">
+        <div class="solutions-intro">
+          <div>
+            <span class="section-kicker">01 / MODUŁY BRANŻOWE</span>
+            <h2 class="section-title">Nie wybierasz „programu”.<br><span class="serif">Wybierasz sposób pracy.</span></h2>
+          </div>
+          <p>Każda firma działa trochę inaczej. Dlatego zamiast wciskać Ci jeden szablon, składamy system z elementów, które odpowiadają realnym procesom w Twojej branży.</p>
+        </div>
+
+        <div class="industry-shell">
+          <div class="industry-nav" id="industry-tabs"></div>
+          <div class="industry-preview" id="industry-preview"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section platform-section" id="platforma">
+      <div class="wrap">
+        <div class="platform-head">
+          <div>
+            <span class="section-kicker">02 / JEDEN SYSTEM</span>
+            <h2 class="section-title">Procesy nie żyją osobno.<br><span class="serif">Twój system też nie powinien.</span></h2>
+          </div>
+          <p>Klient tworzy zlecenie, zlecenie trafia do pracownika, pracownik generuje koszt, a koszt wpływa na wynik. Modulio spina te informacje w jeden przepływ.</p>
+        </div>
+
+        <div class="platform-flow">
+          <div class="process-canvas" id="process-canvas">
+            <div class="canvas-label"><span>PRZEPŁYW INFORMACJI</span><span class="live">SYSTEM AKTYWNY</span></div>
+            <div class="flow-line"></div>
+            <div class="flow-step active" data-flow="0"><div class="step-top"><span class="step-icon"><i data-lucide="user-round-plus"></i></span><b>Nowe zapytanie klienta</b></div><p>Formularz, telefon lub wpis pracownika tworzy kartę klienta i temat kontaktu.</p></div>
+            <div class="flow-step" data-flow="1"><div class="step-top"><span class="step-icon"><i data-lucide="file-text"></i></span><b>Wycena i zlecenie</b></div><p>Zakres, cena, termin, adres i osoby odpowiedzialne trafiają do jednego rekordu.</p></div>
+            <div class="flow-step" data-flow="2"><div class="step-top"><span class="step-icon"><i data-lucide="calendar-check-2"></i></span><b>Plan zespołu</b></div><p>Zlecenie pojawia się w kalendarzu i zadaniach właściwych pracowników.</p></div>
+            <div class="flow-step" data-flow="3"><div class="step-top"><span class="step-icon"><i data-lucide="receipt-text"></i></span><b>Koszt realizacji</b></div><p>Materiały, czas pracy, paliwo i inne koszty są przypięte do zlecenia.</p></div>
+            <div class="flow-step" data-flow="4"><div class="step-top"><span class="step-icon"><i data-lucide="chart-spline"></i></span><b>Wynik i raport</b></div><p>Właściciel widzi nie tylko przychód, ale również faktyczny wynik procesu.</p></div>
+          </div>
+
+          <aside class="platform-control">
+            <span class="control-kicker">ZOBACZ MODUŁY W PRZEPŁYWIE</span>
+            <h3>Jedna informacja.<br>Wiele zastosowań.</h3>
+            <p>Wybierz obszar. Podświetlimy miejsce, w którym wchodzi do procesu.</p>
+            <div class="module-list">
+              <button class="module-button active" data-module-index="0"><span class="module-icon"><i data-lucide="contact"></i></span><span><b>CRM i klienci</b><small>Kontakt, historia, dane</small></span><i data-lucide="arrow-right"></i></button>
+              <button class="module-button" data-module-index="1"><span class="module-icon"><i data-lucide="clipboard-list"></i></span><span><b>Zlecenia i wyceny</b><small>Od zapytania do zamknięcia</small></span><i data-lucide="arrow-right"></i></button>
+              <button class="module-button" data-module-index="2"><span class="module-icon"><i data-lucide="users-round"></i></span><span><b>Zespół i czas</b><small>Grafik, zadania, role</small></span><i data-lucide="arrow-right"></i></button>
+              <button class="module-button" data-module-index="3"><span class="module-icon"><i data-lucide="wallet-cards"></i></span><span><b>Koszty i rentowność</b><small>Wynik na procesie</small></span><i data-lucide="arrow-right"></i></button>
+              <button class="module-button" data-module-index="4"><span class="module-icon"><i data-lucide="chart-column-big"></i></span><span><b>Raporty i dashboard</b><small>Najważniejsze liczby</small></span><i data-lucide="arrow-right"></i></button>
+            </div>
+            <button class="button button-coral" data-open-config><i data-lucide="sliders-horizontal"></i> Dobierz moduły</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="custom-software" id="dedykowane">
+      <div class="wrap custom-grid">
+        <div class="custom-copy">
+          <span class="section-kicker">03 / OPROGRAMOWANIE DEDYKOWANE</span>
+          <h2 class="section-title">Jeśli gotowe moduły to za mało —<br><span class="accent-underline">budujemy od zera.</span></h2>
+          <p>Masz nietypowy proces, własny model biznesowy albo chcesz zastąpić kilka narzędzi jednym systemem? Projektujemy dedykowane oprogramowanie pod konkretny sposób działania Twojej firmy.</p>
+
+          <div class="custom-points">
+            <div class="custom-point"><i data-lucide="panel-top-open"></i><div><b>Panele wewnętrzne</b><span>Systemy dla pracowników, managerów i właścicieli.</span></div></div>
+            <div class="custom-point"><i data-lucide="workflow"></i><div><b>Automatyzacje</b><span>Procesy, które wcześniej wymagały ręcznego przeklejania danych.</span></div></div>
+            <div class="custom-point"><i data-lucide="plug-zap"></i><div><b>Integracje</b><span>Połączenia z istniejącymi narzędziami, API i usługami zewnętrznymi.</span></div></div>
+            <div class="custom-point"><i data-lucide="database"></i><div><b>Dane i raporty</b><span>Własne modele danych, dashboardy i zestawienia.</span></div></div>
+          </div>
+
+          <div class="custom-actions">
+            <button class="button button-dark" data-open-contact data-contact-type="Oprogramowanie dedykowane"><i data-lucide="message-circle-more"></i> Opowiedz o projekcie</button>
+            <button class="button button-ghost" data-open-config><i data-lucide="clipboard-check"></i> Przejdź przez brief</button>
+          </div>
+        </div>
+
+        <div class="blueprint" aria-label="Schemat oprogramowania dedykowanego">
+          <div class="blueprint-head"><span>SZKIC ARCHITEKTURY</span><span class="bp-dot"></span></div>
+          <div class="blueprint-diagram">
+            <span class="bp-line bp-l1"></span><span class="bp-line bp-l2"></span><span class="bp-line bp-l3"></span><span class="bp-line bp-l4"></span>
+            <div class="bp-node bp-a"><span class="bp-icon"><i data-lucide="users"></i></span><b>Pracownicy</b><span>Role, uprawnienia, zadania</span></div>
+            <div class="bp-node bp-b"><span class="bp-icon"><i data-lucide="database-zap"></i></span><b>Dane</b><span>Jedno źródło prawdy</span></div>
+            <div class="bp-node bp-c"><span class="bp-icon"><i data-lucide="plug"></i></span><b>Integracje</b><span>API, e-mail, zewnętrzne systemy</span></div>
+            <div class="bp-node bp-d"><span class="bp-icon"><i data-lucide="chart-no-axes-combined"></i></span><b>Raporty</b><span>Decyzje i kontrola wyników</span></div>
+            <div class="bp-node bp-core"><span class="bp-icon"><i data-lucide="blocks"></i></span><b>Twój system</b><span>Zaprojektowany wokół sposobu pracy Twojej firmy</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proces">
+      <div class="wrap">
+        <div class="process-head">
+          <div>
+            <span class="section-kicker">04 / WSPÓŁPRACA</span>
+            <h2 class="section-title">Najpierw rozumiemy firmę.<br><span class="serif">Potem piszemy kod.</span></h2>
+          </div>
+          <p>Nie kupujesz systemu jednym kliknięciem. Każde wdrożenie zaczyna się od kontaktu, krótkiego briefu i ustalenia, co naprawdę ma usprawnić Twoją pracę.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card" style="--step-color:#f5d9d1"><span class="step-no">01 / KONTAKT</span><span class="step-icon"><i data-lucide="messages-square"></i></span><h3>Rozmawiamy o firmie</h3><p>Branża, procesy, zespół, problemy i oczekiwany efekt. Bez technicznego żargonu.</p></article>
+          <article class="step-card" style="--step-color:#dae7de"><span class="step-no">02 / ANALIZA</span><span class="step-icon"><i data-lucide="scan-search"></i></span><h3>Układamy rozwiązanie</h3><p>Dobieramy gotowe moduły albo określamy zakres dedykowanego systemu.</p></article>
+          <article class="step-card" style="--step-color:#dde5f0"><span class="step-no">03 / WDROŻENIE</span><span class="step-icon"><i data-lucide="rocket"></i></span><h3>Budujemy i uruchamiamy</h3><p>Konfiguracja, dane, role, testy i przygotowanie zespołu do codziennej pracy.</p></article>
+          <article class="step-card" style="--step-color:#eee0ed"><span class="step-no">04 / ROZWÓJ</span><span class="step-icon"><i data-lucide="git-branch-plus"></i></span><h3>System rośnie z Tobą</h3><p>Gdy procesy się zmieniają, dokładamy funkcje, automatyzacje i kolejne integracje.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section offer-section" id="oferta">
+      <div class="wrap">
+        <div class="offer-head">
+          <span class="section-kicker">05 / ORIENTACYJNE PAKIETY</span>
+          <h2 class="section-title">Punkt startu do rozmowy.<br><span class="serif">Nie koszyk zakupowy.</span></h2>
+          <p>Pakiety pomagają określić skalę wdrożenia. Ostateczny zakres i cena są potwierdzane bezpośrednio po kontakcie z Modulio.</p>
+          <span class="offer-note"><i data-lucide="shield-check"></i> Na tej stronie nie ma płatności ani automatycznego zakupu usługi.</span>
+        </div>
+
+        <div class="offer-grid">
+          <article class="offer-card">
+            <span class="offer-icon"><i data-lucide="sprout"></i></span>
+            <h3>Start</h3>
+            <p>Dla małego zespołu, który chce uporządkować jeden najważniejszy proces.</p>
+            <div class="price">od 99 <span>zł / mies. netto</span></div>
+            <div class="setup">Wdrożenie wyceniane po krótkiej rozmowie.</div>
+            <ul>
+              <li><i data-lucide="check"></i> Do 3 użytkowników</li>
+              <li><i data-lucide="check"></i> 1 główny moduł</li>
+              <li><i data-lucide="check"></i> Podstawowe role i dane</li>
+              <li><i data-lucide="check"></i> Eksport danych</li>
+            </ul>
+            <button class="button button-light" data-open-contact data-contact-type="Pakiet Start"><i data-lucide="message-square"></i> Zapytaj o Start</button>
+          </article>
+
+          <article class="offer-card featured">
+            <span class="offer-icon"><i data-lucide="briefcase-business"></i></span>
+            <h3>Business</h3>
+            <p>Dla firmy, która chce połączyć zlecenia, ludzi, koszty i raportowanie.</p>
+            <div class="price">od 199 <span>zł / mies. netto</span></div>
+            <div class="setup">Wdrożenie wyceniane po krótkiej rozmowie.</div>
+            <ul>
+              <li><i data-lucide="check"></i> Do 10 użytkowników</li>
+              <li><i data-lucide="check"></i> Do 3 modułów operacyjnych</li>
+              <li><i data-lucide="check"></i> Grafik i ewidencja pracy</li>
+              <li><i data-lucide="check"></i> Raporty kosztów i wyników</li>
+              <li><i data-lucide="check"></i> Pomoc przy uruchomieniu</li>
+            </ul>
+            <button class="button button-dark" data-open-contact data-contact-type="Pakiet Business"><i data-lucide="message-square"></i> Omów Business</button>
+          </article>
+
+          <article class="offer-card">
+            <span class="offer-icon"><i data-lucide="blocks"></i></span>
+            <h3>Custom</h3>
+            <p>Dla procesu, którego nie da się sensownie zamknąć w standardowym pakiecie.</p>
+            <div class="price">indywidualnie</div>
+            <div class="setup">Zakres, harmonogram i utrzymanie ustalamy projektowo.</div>
+            <ul>
+              <li><i data-lucide="check"></i> Dedykowane moduły</li>
+              <li><i data-lucide="check"></i> Indywidualne workflow</li>
+              <li><i data-lucide="check"></i> Integracje i API</li>
+              <li><i data-lucide="check"></i> Własne dashboardy i role</li>
+              <li><i data-lucide="check"></i> Rozwój po wdrożeniu</li>
+            </ul>
+            <button class="button button-light" data-open-contact data-contact-type="Oprogramowanie dedykowane"><i data-lucide="message-square"></i> Wyceń projekt</button>
+          </article>
+        </div>
+        <div class="contact-only"><i data-lucide="info"></i> Każde uruchomienie wymaga bezpośredniego potwierdzenia zakresu, ceny i terminu.</div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="kontakt">
+      <div class="wrap contact-shell">
+        <div class="contact-copy">
+          <span class="section-kicker">06 / KONTAKT</span>
+          <h2>Powiedz, co dziś<br><span class="serif">spowalnia firmę.</span></h2>
+          <p>Opisz nam swój proces. Odpowiemy, czy lepiej sprawdzi się gotowy zestaw Modulio, jego rozszerzenie czy całkowicie dedykowane oprogramowanie.</p>
+          <div class="contact-chips">
+            <span><i data-lucide="check"></i> bez zobowiązań</span>
+            <span><i data-lucide="check"></i> bez płatności online</span>
+            <span><i data-lucide="check"></i> zakres ustalany indywidualnie</span>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <div class="contact-form-head"><h3>Opowiedz o swoim projekcie</h3><span>FORMULARZ KONTAKTOWY</span></div>
+          <form id="contact-form" novalidate>
+            <div class="field-grid">
+              <div class="field"><label for="name">Imię i nazwisko / firma</label><input id="name" name="name" autocomplete="name" required placeholder="Np. Jan Kowalski / Firma XYZ" /></div>
+              <div class="field"><label for="email">E-mail</label><input id="email" type="email" name="email" autocomplete="email" required placeholder="kontakt@firma.pl" /></div>
+              <div class="field"><label for="phone">Telefon</label><input id="phone" name="phone" autocomplete="tel" placeholder="+48 ..." /></div>
+              <div class="field"><label for="topic">Temat</label><select id="topic" name="topic"><option>Dobór systemu Modulio</option><option>Pakiet Start</option><option>Pakiet Business</option><option>Oprogramowanie dedykowane</option><option>Integracja / rozszerzenie</option><option>Inny temat</option></select></div>
+              <div class="field full"><label for="message">Co chcesz uporządkować lub zautomatyzować?</label><textarea id="message" name="message" required placeholder="Opisz krótko, jak wygląda dziś proces i co chciałbyś zmienić..."></textarea></div>
+            </div>
+            <div class="form-bottom">
+              <p>Formularz nie uruchamia zakupu. Po wysłaniu zgłoszenia zakres i warunki współpracy ustalane są bezpośrednio.</p>
+              <button class="button button-coral" type="submit"><i data-lucide="send"></i> Wyślij zapytanie</button>
+            </div>
+            <div class="form-status" id="form-status" role="status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap faq-grid">
+        <div>
+          <span class="section-kicker">07 / FAQ</span>
+          <h2 class="section-title">Konkretne pytania.<br><span class="serif">Konkretne odpowiedzi.</span></h2>
+        </div>
+        <div class="faq-list">
+          <details open><summary>Czy mogę kupić system bezpośrednio na stronie?<span class="faq-plus"><i data-lucide="plus"></i></span></summary><p>Nie. Strona służy do poznania oferty, konfiguracji potrzeb i kontaktu. Uruchomienie oprogramowania wymaga bezpośredniego ustalenia zakresu, ceny, terminu i warunków współpracy.</p></details>
+          <details><summary>Czym różni się pakiet od systemu dedykowanego?<span class="faq-plus"><i data-lucide="plus"></i></span></summary><p>Pakiet wykorzystuje gotowe moduły Modulio i jest szybszym punktem startu. System dedykowany projektujemy pod nietypowe procesy, integracje, role lub logikę biznesową konkretnej firmy.</p></details>
+          <details><summary>Czy mogę zacząć od jednego modułu i rozbudować system później?<span class="faq-plus"><i data-lucide="plus"></i></span></summary><p>Tak. Modułowa konstrukcja pozwala rozpocząć od najważniejszego procesu, a później dodawać kolejne obszary, integracje i automatyzacje.</p></details>
+          <details><summary>Czy konfigurator podaje ostateczną cenę?<span class="faq-plus"><i data-lucide="plus"></i></span></summary><p>Nie. Konfigurator porządkuje potrzeby i pokazuje orientacyjną skalę wdrożenia. Ostateczna wycena powstaje po analizie zakresu.</p></details>
+          <details><summary>Czy system działa na telefonie i komputerze?<span class="faq-plus"><i data-lucide="plus"></i></span></summary><p>Projektujemy interfejs jako responsywną aplikację webową. Układ i funkcje są dostosowane do komputera, tabletu i telefonu, zależnie od roli użytkownika.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="brand" href="#top"><span class="brand-mark"><i data-lucide="blocks"></i></span>modulio<span class="brand-dot">.</span></a>
+        <p>Oprogramowanie, które dopasowuje się<br>do sposobu pracy Twojej firmy.</p>
+        <div class="footer-links"><a href="#rozwiazania">Rozwiązania</a><a href="#dedykowane">Dedykowane</a><a href="#proces">Współpraca</a><a href="#kontakt">Kontakt</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Modulio. Wszelkie prawa zastrzeżone.</span><span>Gotowe moduły · Oprogramowanie dedykowane · Integracje</span></div>
+    </div>
+  </footer>
+
+  <!-- CONFIGURATOR -->
+  <div class="modal" id="config-modal" role="dialog" aria-modal="true" aria-labelledby="config-title">
+    <div class="configurator">
+      <aside class="config-side">
+        <a class="brand" href="#"><span class="brand-mark"><i data-lucide="blocks"></i></span>modulio<span class="brand-dot">.</span></a>
+        <p>Przejdź przez kilka krótkich kroków. Na końcu otrzymasz podsumowanie potrzeb i orientacyjny punkt startowy do rozmowy.</p>
+        <div class="config-progress" id="config-progress">
+          <div class="progress-step active" data-progress="1"><span class="dot">1</span> Typ rozwiązania</div>
+          <div class="progress-step" data-progress="2"><span class="dot">2</span> Firma i zespół</div>
+          <div class="progress-step" data-progress="3"><span class="dot">3</span> Obszary systemu</div>
+          <div class="progress-step" data-progress="4"><span class="dot">4</span> Integracje i tempo</div>
+          <div class="progress-step" data-progress="5"><span class="dot">5</span> Podsumowanie</div>
+        </div>
+        <p class="config-side-note">Konfigurator nie jest zamówieniem ani wiążącą ofertą. Nie pobiera płatności.</p>
+      </aside>
+
+      <div class="config-main">
+        <div class="config-top"><span>WSTĘPNY BRIEF</span><button class="modal-close" data-close-config aria-label="Zamknij"><i data-lucide="x"></i></button></div>
+
+        <section class="config-step active" data-step="1">
+          <h3 id="config-title">Czego potrzebuje Twoja firma?</h3>
+          <p>Wybierz kierunek. Nie musisz znać nazw modułów ani technologii.</p>
+          <div class="choice-grid">
+            <label class="choice"><input type="radio" name="solutionType" value="Gotowy system Modulio" checked><span><b>Gotowy system Modulio</b><span>Chcę dobrać istniejące moduły i uruchomić je w swojej firmie.</span></span></label>
+            <label class="choice"><input type="radio" name="solutionType" value="Gotowe moduły + rozszerzenia"><span><b>Modulio + własne rozszerzenia</b><span>Gotowe moduły są blisko, ale potrzebuję kilku własnych funkcji.</span></span></label>
+            <label class="choice"><input type="radio" name="solutionType" value="Oprogramowanie dedykowane"><span><b>Oprogramowanie dedykowane</b><span>Potrzebuję systemu budowanego pod mój proces od podstaw.</span></span></label>
+            <label class="choice"><input type="radio" name="solutionType" value="Nie wiem"><span><b>Nie wiem jeszcze</b><span>Opiszę problem, a Modulio pomoże dobrać właściwy wariant.</span></span></label>
+          </div>
+        </section>
+
+        <section class="config-step" data-step="2">
+          <h3>Powiedz coś o firmie.</h3>
+          <p>Te informacje pomagają oszacować skalę, role i sposób wdrożenia.</p>
+          <div class="config-fields">
+            <div class="field"><label for="cfg-industry">Branża</label><select id="cfg-industry"><option>Gastronomia</option><option>Usługi i serwis</option><option>Transport / przeprowadzki</option><option>Beauty & wellness</option><option>Handel</option><option>Inna / nietypowa</option></select></div>
+            <div class="field"><label for="cfg-company-size">Skala firmy</label><select id="cfg-company-size"><option value="1">1–3 osoby</option><option value="2">4–10 osób</option><option value="3">11–25 osób</option><option value="4">26–50 osób</option><option value="5">50+ osób</option></select></div>
+            <div class="field"><label for="cfg-locations">Liczba lokalizacji</label><select id="cfg-locations"><option value="1">1 lokalizacja</option><option value="2">2–3 lokalizacje</option><option value="3">4+ lokalizacje</option><option value="2">Praca mobilna / terenowa</option></select></div>
+            <div class="field"><label for="cfg-users">Planowana liczba użytkowników</label><input id="cfg-users" type="number" min="1" max="500" value="6"></div>
+          </div>
+        </section>
+
+        <section class="config-step" data-step="3">
+          <h3>Co system ma ogarniać?</h3>
+          <p>Zaznacz wszystkie obszary, które mają znaleźć się w jednym środowisku.</p>
+          <div class="choice-grid" id="module-choices">
+            <label class="choice"><input type="checkbox" value="Klienci / CRM" checked><span><b>Klienci / CRM</b><span>Dane, historia, kontakt, notatki.</span></span></label>
+            <label class="choice"><input type="checkbox" value="Zlecenia / wyceny" checked><span><b>Zlecenia / wyceny</b><span>Zakres, statusy, terminy i realizacja.</span></span></label>
+            <label class="choice"><input type="checkbox" value="Kalendarz / grafik"><span><b>Kalendarz / grafik</b><span>Pracownicy, zmiany i plan pracy.</span></span></label>
+            <label class="choice"><input type="checkbox" value="Koszty / rentowność"><span><b>Koszty / rentowność</b><span>Koszty procesów i wynik operacyjny.</span></span></label>
+            <label class="choice"><input type="checkbox" value="Magazyn / produkty"><span><b>Magazyn / produkty</b><span>Stany, zapotrzebowanie i ruch towaru.</span></span></label>
+            <label class="choice"><input type="checkbox" value="Raporty / dashboard"><span><b>Raporty / dashboard</b><span>KPI i najważniejsze dane właściciela.</span></span></label>
+            <label class="choice"><input type="checkbox" value="Automatyzacje"><span><b>Automatyzacje</b><span>Powiadomienia, reguły i procesy automatyczne.</span></span></label>
+            <label class="choice"><input type="checkbox" value="Role / uprawnienia"><span><b>Role / uprawnienia</b><span>Różne widoki dla właściciela i pracowników.</span></span></label>
+          </div>
+        </section>
+
+        <section class="config-step" data-step="4">
+          <h3>Jak bardzo niestandardowy ma być system?</h3>
+          <p>Integracje i tempo wdrożenia mają duży wpływ na zakres prac.</p>
+          <div class="choice-grid" id="integration-choices">
+            <label class="choice"><input type="checkbox" value="E-mail / powiadomienia"><span><b>E-mail / powiadomienia</b><span>Automatyczne wiadomości i alerty.</span></span></label>
+            <label class="choice"><input type="checkbox" value="Zewnętrzne API"><span><b>Zewnętrzne API</b><span>Połączenie z innym systemem lub usługą.</span></span></label>
+            <label class="choice"><input type="checkbox" value="Import danych"><span><b>Import danych</b><span>Przeniesienie danych z arkuszy lub innego systemu.</span></span></label>
+            <label class="choice"><input type="checkbox" value="Własne automatyzacje"><span><b>Własne automatyzacje</b><span>Niestandardowe reguły i akcje.</span></span></label>
+          </div>
+          <div class="range-wrap">
+            <div class="range-head"><span>Preferowane tempo startu</span><strong id="timeline-label">1–2 miesiące</strong></div>
+            <input id="timeline" type="range" min="1" max="4" step="1" value="2">
+          </div>
+        </section>
+
+        <section class="config-step" data-step="5">
+          <h3>Twój wstępny zakres.</h3>
+          <p>To materiał do rozmowy, nie oferta. Możesz od razu przepisać ten brief do formularza kontaktowego.</p>
+          <div class="summary-grid">
+            <div class="summary-card"><h4>Podsumowanie konfiguracji</h4><div class="summary-list" id="config-summary"></div></div>
+            <div class="estimate-card"><span>ORIENTACYJNY PUNKT STARTOWY</span><strong id="estimate-price">od 199 zł / mies.</strong><p id="estimate-note">Koszt wdrożenia i ostateczny abonament zależą od zakresu, integracji i niestandardowych funkcji.</p></div>
+          </div>
+        </section>
+
+        <div class="config-nav">
+          <button class="button button-light" id="config-back"><i data-lucide="arrow-left"></i> Wstecz</button>
+          <button class="button button-dark" id="config-next">Dalej <i data-lucide="arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const industries = [
+      {
+        name:'Gastronomia', icon:'utensils', tag:'operacje lokalu', color:'#f6dacc',
+        title:'Zaplecze, które wie czego brakuje — zanim zabraknie.',
+        lead:'Kontroluj zapotrzebowanie, ceny produktów, grafik, czas pracy i koszty operacyjne bez kolejnych arkuszy.',
+        features:['Zapotrzebowanie','Koszty produktów','Grafik','Czas pracy'],
+        board:[['shopping-basket','Zakupy i dostawy','Listy zapotrzebowania i ceny'],['clock-3','Czas zespołu','Zmiany i ewidencja pracy'],['chart-pie','Rentowność','Koszt operacyjny i wynik']]
+      },
+      {
+        name:'Usługi i serwis', icon:'wrench', tag:'zlecenia terenowe', color:'#d9e6dd',
+        title:'Od telefonu klienta do zamkniętego zlecenia.',
+        lead:'Adres, termin, wycena, pracownik, koszty i status realizacji są częścią jednego procesu, a nie pięciu osobnych narzędzi.',
+        features:['Zlecenia','Kalendarz','Klienci','Pracownicy'],
+        board:[['clipboard-list','Karta zlecenia','Adres, termin, kwota, status'],['calendar-days','Plan realizacji','Przydział pracowników i terminy'],['badge-dollar-sign','Wynik zlecenia','Przychód kontra koszt realizacji']]
+      },
+      {
+        name:'Transport', icon:'truck', tag:'mobilne zespoły', color:'#dce5f1',
+        title:'Wycena, trasa, ekipa i koszt — wszystko spięte w jedno zlecenie.',
+        lead:'Dla transportu, przeprowadzek i usług mobilnych. System może liczyć koszty, planować pracę i pokazywać rentowność każdej realizacji.',
+        features:['Wyceny','Trasy','Koszty paliwa','Pojazdy'],
+        board:[['route','Trasy i adresy','Plan dnia oraz miejsca realizacji'],['fuel','Koszty pojazdu','Paliwo i koszty bezpośrednie'],['users-round','Ekipa','Pracownicy przypisani do zlecenia']]
+      },
+      {
+        name:'Beauty & wellness', icon:'sparkles', tag:'wizyty i klienci', color:'#ebdfed',
+        title:'Mniej chaosu w grafiku. Więcej uwagi dla klienta.',
+        lead:'Wizyty, historia klienta, usługi, grafik specjalistów i raport wykonanej pracy mogą działać w jednym panelu.',
+        features:['Wizyty','Historia klienta','Grafik','Usługi'],
+        board:[['calendar-heart','Wizyty','Terminy i potwierdzenia'],['contact-round','Klienci','Historia usług i notatki'],['scissors','Usługi','Cennik i wykonana praca']]
+      },
+      {
+        name:'Handel', icon:'store', tag:'towar i stany', color:'#ece5cf',
+        title:'Wiesz, co masz, czego brakuje i co naprawdę się sprzedaje.',
+        lead:'Katalog produktów, dostawy, stany, zapotrzebowanie i raporty w jednym miejscu — także dla wielu lokalizacji.',
+        features:['Produkty','Stany','Dostawy','Raporty'],
+        board:[['package-search','Stany magazynowe','Aktualna liczba produktów'],['truck','Dostawy','Przyjęcia i historia zmian'],['chart-column','Sprzedaż','Najważniejsze dane produktowe']]
+      }
+    ];
+
+    const tabs = document.getElementById('industry-tabs');
+    const preview = document.getElementById('industry-preview');
+    let activeIndustry = 0;
+
+    function renderIndustry(index){
+      activeIndustry = index;
+      tabs.innerHTML = industries.map((x,i)=>`<button class="industry-tab ${i===index?'is-active':''}" data-industry="${i}"><span class="tab-icon"><i data-lucide="${x.icon}"></i></span><span><b>${x.name}</b><small>${x.tag}</small></span><i data-lucide="arrow-right"></i></button>`).join('');
+      const x = industries[index];
+      preview.style.setProperty('--preview-color',x.color);
+      preview.innerHTML = `
+        <div class="industry-preview-inner">
+          <div class="industry-preview-top">
+            <div>
+              <div class="meta"><span class="pill">MODULIO / ${x.name}</span><span class="pill">PRZYKŁADOWY ZAKRES</span></div>
+              <h3>${x.title}</h3>
+              <p class="lead">${x.lead}</p>
+            </div>
+          </div>
+          <div class="industry-board">
+            <div class="board-head"><b>Tak może wyglądać Twój system</b><span>DEMO INTERFEJSU</span></div>
+            <div class="board-grid">${x.board.map(b=>`<div class="board-item"><span class="board-icon"><i data-lucide="${b[0]}"></i></span><b>${b[1]}</b><span>${b[2]}</span></div>`).join('')}</div>
+          </div>
+          <div class="industry-foot">
+            <div class="industry-features">${x.features.map(f=>`<span>${f}</span>`).join('')}</div>
+            <button class="button button-dark button-small" data-open-contact data-contact-type="${x.name}"><i data-lucide="message-square"></i> Porozmawiaj o ${x.name.toLowerCase()}</button>
+          </div>
+        </div>`;
+      lucide.createIcons();
+    }
+    renderIndustry(0);
+    tabs.addEventListener('click',e=>{
+      const btn=e.target.closest('[data-industry]'); if(!btn)return;
+      renderIndustry(Number(btn.dataset.industry));
+      if(window.gsap){gsap.fromTo('#industry-preview .industry-preview-inner',{opacity:0,y:18},{opacity:1,y:0,duration:.45,ease:'power2.out'});}
+    });
+
+    // Header + mobile menu
+    const header=document.getElementById('site-header');
+    const menuToggle=document.getElementById('menu-toggle');
+    const nav=document.getElementById('main-nav');
+    const navIndicator=nav.querySelector('.nav-indicator');
+    const navLinks=[...nav.querySelectorAll('a')];
+    window.addEventListener('scroll',()=>header.classList.toggle('is-scrolled',window.scrollY>20),{passive:true});
+    menuToggle.addEventListener('click',()=>{
+      const open=menuToggle.getAttribute('aria-expanded')!=='true';
+      menuToggle.setAttribute('aria-expanded',String(open)); nav.classList.toggle('open',open);
+    });
+    navLinks.forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuToggle.setAttribute('aria-expanded','false')}));
+    function moveNavIndicator(el){
+      if(innerWidth<=900)return;
+      const r=el.getBoundingClientRect(),pr=nav.getBoundingClientRect();
+      navIndicator.style.width=r.width+'px'; navIndicator.style.left=(r.left-pr.left)+'px'; navIndicator.style.opacity='1';
+    }
+    navLinks.forEach(a=>a.addEventListener('mouseenter',()=>moveNavIndicator(a)));
+    nav.addEventListener('mouseleave',()=>navIndicator.style.opacity='0');
+
+    // Platform module interaction
+    const moduleButtons=[...document.querySelectorAll('.module-button')];
+    const flowSteps=[...document.querySelectorAll('.flow-step')];
+    moduleButtons.forEach(btn=>btn.addEventListener('click',()=>{
+      const idx=Number(btn.dataset.moduleIndex);
+      moduleButtons.forEach(b=>b.classList.toggle('active',b===btn));
+      flowSteps.forEach((s,i)=>s.classList.toggle('active',i===idx));
+      if(window.gsap)gsap.fromTo(flowSteps[idx],{scale:.97},{scale:1,duration:.35,ease:'back.out(2)'});
+    }));
+
+    // Contact helpers
+    function scrollToContact(type){
+      if(type){const topic=document.getElementById('topic'); const options=[...topic.options]; const match=options.find(o=>o.textContent===type); if(match)topic.value=match.textContent; else if(type.includes('Gastronomia')||type.includes('Transport')||type.includes('Beauty')||type.includes('Handel')||type.includes('Usługi'))topic.value='Dobór systemu Modulio';}
+      document.getElementById('kontakt').scrollIntoView({behavior:'smooth',block:'center'});
+      setTimeout(()=>document.getElementById('name').focus({preventScroll:true}),650);
+    }
+    document.addEventListener('click',e=>{
+      const btn=e.target.closest('[data-open-contact]'); if(!btn)return;
+      scrollToContact(btn.dataset.contactType||'');
+    });
+
+    // Contact form - front-end ready, posts to /api/contact when backend exists
+    const contactForm=document.getElementById('contact-form');
+    const formStatus=document.getElementById('form-status');
+    contactForm.addEventListener('submit',async e=>{
+      e.preventDefault();
+      if(!contactForm.checkValidity()){contactForm.reportValidity();return;}
+      const submit=contactForm.querySelector('button[type=submit]');
+      const original=submit.innerHTML; submit.disabled=true; submit.textContent='Wysyłanie...'; formStatus.textContent='';
+      const payload=Object.fromEntries(new FormData(contactForm).entries());
+      try{
+        const res=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+        if(!res.ok)throw new Error('Brak endpointu');
+        contactForm.reset(); formStatus.textContent='Dziękujemy. Zapytanie zostało wysłane.';
+      }catch(err){
+        formStatus.textContent='Formularz jest gotowy po stronie frontendu. Aby wysyłał wiadomości, podłącz endpoint POST /api/contact w backendzie.';
+      }finally{submit.disabled=false;submit.innerHTML=original;lucide.createIcons();}
+    });
+
+    // Configurator
+    const modal=document.getElementById('config-modal');
+    const steps=[...document.querySelectorAll('.config-step')];
+    const progress=[...document.querySelectorAll('.progress-step')];
+    const nextBtn=document.getElementById('config-next');
+    const backBtn=document.getElementById('config-back');
+    let currentStep=1;
+    const timeline=document.getElementById('timeline');
+    const timelineLabel=document.getElementById('timeline-label');
+    const timelineMap={1:'Jak najszybciej',2:'1–2 miesiące',3:'2–4 miesiące',4:'Bez presji czasowej'};
+    timeline.addEventListener('input',()=>timelineLabel.textContent=timelineMap[timeline.value]);
+
+    function openConfig(){modal.classList.add('is-open');document.body.classList.add('modal-open');showConfigStep(1)}
+    function closeConfig(){modal.classList.remove('is-open');document.body.classList.remove('modal-open')}
+    document.querySelectorAll('[data-open-config]').forEach(b=>b.addEventListener('click',openConfig));
+    document.querySelector('[data-close-config]').addEventListener('click',closeConfig);
+    modal.addEventListener('click',e=>{if(e.target===modal)closeConfig()});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open'))closeConfig()});
+
+    function showConfigStep(step){
+      currentStep=step;
+      steps.forEach(s=>s.classList.toggle('active',Number(s.dataset.step)===step));
+      progress.forEach(p=>{const n=Number(p.dataset.progress);p.classList.toggle('active',n===step);p.classList.toggle('done',n<step)});
+      backBtn.style.visibility=step===1?'hidden':'visible';
+      nextBtn.innerHTML=step===5?'<i data-lucide="message-square"></i> Przejdź do kontaktu':'Dalej <i data-lucide="arrow-right"></i>';
+      if(step===5)buildSummary();
+      lucide.createIcons();
+    }
+
+    nextBtn.addEventListener('click',()=>{
+      if(currentStep<5)showConfigStep(currentStep+1);
+      else{
+        const summaryText=buildSummary(true);
+        closeConfig();
+        document.getElementById('topic').value='Dobór systemu Modulio';
+        document.getElementById('message').value='Wstępna konfiguracja Modulio:\n\n'+summaryText+'\n\nDodatkowe informacje: ';
+        scrollToContact();
+      }
+    });
+    backBtn.addEventListener('click',()=>{if(currentStep>1)showConfigStep(currentStep-1)});
+
+    function getChecked(container){return [...document.querySelectorAll(`${container} input:checked`)].map(x=>x.value)}
+    function buildSummary(returnText=false){
+      const type=document.querySelector('input[name=solutionType]:checked').value;
+      const industry=document.getElementById('cfg-industry').value;
+      const size=document.getElementById('cfg-company-size').selectedOptions[0].textContent;
+      const locations=document.getElementById('cfg-locations').selectedOptions[0].textContent;
+      const users=Math.max(1,Number(document.getElementById('cfg-users').value||1));
+      const modules=getChecked('#module-choices');
+      const integrations=getChecked('#integration-choices');
+      const time=timelineMap[timeline.value];
+      const custom=type.includes('dedykowane')||type.includes('rozszerzenia');
+      const complexity=Number(document.getElementById('cfg-company-size').value)+Number(document.getElementById('cfg-locations').value)+modules.length+(integrations.length*2)+(custom?4:0);
+      let estimate='od 99 zł / mies.';
+      let note='Najmniejszy wariant modułowy. Wdrożenie wyceniane osobno po rozmowie.';
+      if(type==='Oprogramowanie dedykowane'||complexity>=15){estimate='wycena indywidualna';note='Zakres wskazuje na projekt dedykowany lub mocno rozszerzony. Cena zależy od analizy funkcji i integracji.';}
+      else if(complexity>=8||users>10){estimate='od 199 zł / mies.';note='Najbardziej prawdopodobny punkt startowy to wariant Business lub rozszerzony zestaw modułów.';}
+      const rows=[['Kierunek',type],['Branża',industry],['Skala',size],['Lokalizacje',locations],['Użytkownicy',users],['Moduły',modules.length?modules.join(', '):'do ustalenia'],['Integracje',integrations.length?integrations.join(', '):'brak wskazanych'],['Tempo',time]];
+      document.getElementById('config-summary').innerHTML=rows.map(r=>`<div class="summary-row"><span>${r[0]}</span><b>${r[1]}</b></div>`).join('');
+      document.getElementById('estimate-price').textContent=estimate;
+      document.getElementById('estimate-note').textContent=note;
+      const text=rows.map(r=>`${r[0]}: ${r[1]}`).join('\n');
+      return returnText?text:undefined;
+    }
+
+    // GSAP animations
+    if(window.gsap){
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.from('.hero-copy > *',{y:24,opacity:0,duration:.75,stagger:.09,ease:'power3.out',delay:.15});
+      gsap.from('.core-card',{y:28,opacity:0,rotate:-5,duration:.9,ease:'power3.out',delay:.2});
+      gsap.from('.float-card',{scale:.82,opacity:0,duration:.65,stagger:.13,ease:'back.out(1.8)',delay:.55});
+      gsap.to('.float-a',{y:-11,x:4,duration:3.4,repeat:-1,yoyo:true,ease:'sine.inOut'});
+      gsap.to('.float-b',{y:12,x:-4,duration:4.1,repeat:-1,yoyo:true,ease:'sine.inOut'});
+      gsap.to('.float-c',{y:-9,duration:3.8,repeat:-1,yoyo:true,ease:'sine.inOut'});
+      document.querySelectorAll('.section-title').forEach(el=>gsap.from(el,{scrollTrigger:{trigger:el,start:'top 86%'},y:35,opacity:0,duration:.75,ease:'power3.out'}));
+      gsap.from('.industry-shell',{scrollTrigger:{trigger:'.industry-shell',start:'top 85%'},y:40,opacity:0,duration:.8,ease:'power3.out'});
+      gsap.from('.flow-step',{scrollTrigger:{trigger:'.process-canvas',start:'top 82%'},x:i=>i%2?25:-25,opacity:0,duration:.5,stagger:.12,ease:'power2.out'});
+      gsap.from('.step-card',{scrollTrigger:{trigger:'.steps-grid',start:'top 84%'},y:35,opacity:0,duration:.55,stagger:.1,ease:'power2.out'});
+      gsap.from('.offer-card',{scrollTrigger:{trigger:'.offer-grid',start:'top 84%'},y:30,opacity:0,duration:.55,stagger:.1,ease:'power2.out'});
+    }
+
+    lucide.createIcons();
+  </script>
+</body>
+</html>
