@@ -1,0 +1,15 @@
+{
+  "name": "modulio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Formularz Modulio z wysylka zgloszen na Discorda",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "check": "node --check server.js"
+  },
+  "engines": {
+    "node": ">=22.9.0"
+  }
+}
