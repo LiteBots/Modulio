@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modulio — Twoja strona, Twój budżet</title>
+<meta name="description" content="Wybierz budżet od 500 zł. Przygotujemy ofertę strony internetowej w ciągu 48 godzin.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23ed552f'/%3E%3Ctext x='9' y='29' font-size='29' font-family='Arial' fill='white'%3Em%3C/text%3E%3C/svg%3E">
+
+<style>
+:root {
+  --orange: #ed552f;
+  --ink: #252824;
+  --muted: #747b70;
+  --line: #e1e5dd;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fafbf9;
+  color: var(--ink);
+  font: 16px/1.6 Arial, sans-serif;
+}
+
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+a { color: inherit; }
+
+header, main, footer {
+  max-width: 1140px;
+  margin: auto;
+}
+
+header {
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  text-decoration: none;
+}
+
+.logo span { color: var(--orange); }
+
+header p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+main { padding: 36px 24px; }
+
+.intro {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.eyebrow {
+  color: var(--orange);
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(32px, 4vw, 47px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin: 13px 0;
+}
+
+h1 span { color: var(--orange); }
+
+.intro p {
+  color: var(--muted);
+  margin: 16px auto;
+  max-width: 740px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.summary {
+  background: #eef1e9;
+  border: 1px solid #dfe5d6;
+  border-radius: 20px;
+  padding: 30px;
+  position: sticky;
+  top: 24px;
+}
+
+.summary h2 {
+  font-size: 33px;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin: 16px 0;
+}
+
+.summary h2 span { color: #6c7c5e; }
+.summary p { color: var(--muted); }
+
+.ticket {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 22px;
+  border-radius: 12px;
+  transform: rotate(-2deg);
+  margin: 28px 0;
+}
+
+.ticket small {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 1px;
+}
+
+.ticket strong {
+  display: block;
+  font-size: 40px;
+  overflow-wrap: anywhere;
+  line-height: 1.4;
+}
+
+.ticket p {
+  font-size: 13px;
+  border-top: 1px dashed var(--line);
+  padding-top: 12px;
+  margin-bottom: 0;
+}
+
+.promise { margin: 24px 0; }
+.promise b { display: block; }
+
+.promise span {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 12px 30px #25301b05;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+fieldset:disabled { opacity: .65; }
+
+section + section {
+  border-top: 1px solid var(--line);
+  margin-top: 28px;
+  padding-top: 24px;
+}
+
+h2 {
+  font-size: 23px;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+
+h2 i {
+  display: inline-grid;
+  place-items: center;
+  background: #fff0e9;
+  color: var(--orange);
+  font-style: normal;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.caption {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 18px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+input:not([type=range]), textarea, select {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #dce1d6;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  margin-top: 7px;
+  outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px #ed552f20;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+input[type=range] {
+  width: 100%;
+  accent-color: var(--orange);
+  margin: 22px 0 0;
+  cursor: pointer;
+}
+
+.amount {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.amount input {
+  font-size: 40px;
+  font-weight: 600;
+  border: 0;
+  padding: 0;
+  width: 220px;
+  max-width: 85%;
+}
+
+.amount span {
+  font-size: 25px;
+  color: #8e9688;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.presets {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-top: 17px;
+}
+
+.presets button {
+  border: 1px solid var(--line);
+  background: white;
+  border-radius: 7px;
+  padding: 7px 12px;
+  font-size: 14px;
+}
+
+.presets button[aria-pressed=true] {
+  background: #fff1eb;
+  border-color: var(--orange);
+  color: #ba3d1d;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.note {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.counter {
+  text-align: right;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.submit {
+  width: 100%;
+  background: var(--orange);
+  border: 0;
+  border-radius: 9px;
+  padding: 14px;
+  color: white;
+  font-weight: 600;
+  transition: background .2s, transform .2s;
+}
+
+.submit:hover {
+  background: #d94320;
+  transform: translateY(-1px);
+}
+
+.submit:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+.status {
+  margin: 16px 0 0;
+  border-radius: 9px;
+  padding: 13px;
+  font-size: 14px;
+}
+
+.status:empty { display: none; }
+
+.status.error {
+  background: #fff0ec;
+  color: #ac351b;
+}
+
+.status.success {
+  background: #eaf4e4;
+  color: #365c29;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  header p { display: none; }
+  main { padding: 28px 16px; }
+  .intro { text-align: left; }
+  .layout { grid-template-columns: 1fr; }
+  .summary { position: static; order: 2; }
+  .card { padding: 23px 19px; }
+  .grid { grid-template-columns: 1fr; gap: 0; }
+  .summary h2 { font-size: 28px; }
+  .ticket { transform: none; }
+  .intro p { font-size: 15px; }
+  footer { gap: 15px; font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <a class="logo" href="#">modulio<span>.</span></a>
+  <p>Dobre strony. Rozsądne budżety.</p>
+</header>
+
+<main>
+  <div class="intro">
+    <div class="eyebrow">TWOJA STRONA ZACZYNA SIĘ TUTAJ</div>
+    <h1>
+      Twój pomysł. Twój budżet.<br>
+      <span>Nasze rozwiązania.</span>
+    </h1>
+    <p>
+      Nie musisz przepłacać za stronę internetową.
+      Dobierz budżet, a my dobierzemy rozwiązania dla Twojego biznesu.
+    </p>
+  </div>
+
+  <div class="layout">
+    <aside class="summary">
+      <div class="eyebrow">STRONA NA TWOICH ZASADACH</div>
+      <h2>
+        Ty ustalasz budżet.<br>
+        My dobieramy<br>
+        <span>możliwości.</span>
+      </h2>
+      <p>
+        Bez sztywnych pakietów i płacenia za funkcje,
+        których nie potrzebujesz.
+      </p>
+
+      <div class="ticket">
+        <small>TWÓJ BUDŻET NA STRONĘ</small>
+        <strong id="budgetPreview">2 000 zł</strong>
+        <p>Rozwiązania dopasowane do Ciebie.</p>
+      </div>
+
+      <div class="promise">
+        <b>Oferta w ciągu 48 godzin</b>
+        <span>Skontaktujemy się mailowo lub telefonicznie.</span>
+      </div>
+
+      <div class="promise">
+        <b>Bezpłatne zgłoszenie</b>
+        <span>Bez płatności i bez zobowiązań.</span>
+      </div>
+    </aside>
+
+    <div class="card">
+      <form id="form">
+        <fieldset id="fields">
+
+          <section>
+            <h2><i>1</i> Twój budżet</h2>
+            <p class="caption">
+              Wybierz kwotę, którą chcesz przeznaczyć na stronę.
+            </p>
+
+            <label for="budget">
+              Budżet w złotych — minimum 500 zł
+            </label>
+
+            <div class="amount">
+              <input
+                id="budget"
+                name="budget"
+                type="number"
+                min="500"
+                max="1000000"
+                step="1"
+                value="2000"
+                required
+              >
+              <span>zł</span>
+            </div>
+
+            <input
+              id="slider"
+              type="range"
+              min="500"
+              max="15000"
+              step="100"
+              value="2000"
+              aria-label="Wybierz budżet"
+            >
+
+            <div class="range-labels">
+              <span>500 zł</span>
+              <span>15 000 zł</span>
+            </div>
+
+            <div class="presets" id="presets">
+              <button type="button" data-budget="500">500 zł</button>
+              <button type="button" data-budget="1000">1 000 zł</button>
+              <button type="button" data-budget="2000">2 000 zł</button>
+              <button type="button" data-budget="5000">5 000 zł</button>
+              <button type="button" data-budget="10000">10 000 zł</button>
+            </div>
+
+            <p class="note">
+              Większy budżet? Wpisz własną kwotę w polu powyżej.
+            </p>
+          </section>
+
+          <section>
+            <h2><i>2</i> Twój projekt</h2>
+
+            <label for="industry">W jakiej branży działasz?</label>
+            <select id="industry" name="industry" required>
+              <option value="">Wybierz branżę</option>
+              <option>Usługi i serwis</option>
+              <option>Gastronomia</option>
+              <option>Transport i logistyka</option>
+              <option>Beauty i zdrowie</option>
+              <option>Budownictwo i nieruchomości</option>
+              <option>Handel i e-commerce</option>
+              <option>Edukacja</option>
+              <option>Portfolio / marka osobista</option>
+              <option>Inna branża</option>
+            </select>
+
+            <label for="description">
+              Czego potrzebujesz na swojej stronie?
+            </label>
+            <textarea
+              id="description"
+              name="description"
+              minlength="20"
+              maxlength="5000"
+              required
+              placeholder="Opisz swój biznes, potrzebne podstrony i funkcje. Np. oferta usług, galeria realizacji, cennik, menu, formularz kontaktowy…"
+            ></textarea>
+
+            <div class="counter">
+              <span id="count">0</span>/5000 · minimum 20 znaków
+            </div>
+          </section>
+
+          <section>
+            <h2><i>3</i> Dane kontaktowe</h2>
+
+            <label for="name">
+              Imię i nazwisko lub nazwa firmy
+            </label>
+            <input
+              id="name"
+              name="name"
+              autocomplete="organization"
+              minlength="2"
+              maxlength="150"
+              required
+              placeholder="Jan Kowalski lub Twoja Firma"
+            >
+
+            <div class="grid">
+              <div>
+                <label for="email">Adres e-mail</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  maxlength="254"
+                  required
+                  placeholder="jan@firma.pl"
+                >
+              </div>
+
+              <div>
+                <label for="phone">Numer telefonu</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  pattern="[+0-9 ()\-]{7,25}"
+                  required
+                  placeholder="+48 123 456 789"
+                >
+              </div>
+            </div>
+
+            <p class="note">
+              Dane wykorzystamy do kontaktu w sprawie Twojego zgłoszenia
+              i przygotowania oferty. Wysłanie formularza nie jest
+              zamówieniem strony.
+            </p>
+
+            <button class="submit" id="submit" type="submit">
+              Wyślij zgłoszenie →
+            </button>
+
+            <p class="note" style="text-align:center">
+              Skontaktujemy się z Tobą w ciągu 48 godzin.
+            </p>
+          </section>
+
+        </fieldset>
+
+        <p
+          id="status"
+          class="status"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <span>Modulio · Twoja strona, Twój budżet.</span>
+  <span>Projektujemy z myślą o Tobie.</span>
+</footer>
+
+<script>
+// Formularz korzysta z serwera Modulio.
+// Na innym hostingu trzeba wdrożyć zgodny endpoint /api/enquiries.
+// Adres webhooka Discord jest przechowywany wyłącznie na serwerze.
+
+const API_URL = '/api/enquiries';
+const $ = id => document.getElementById(id);
+const form = $('form');
+
+let enquiryId = '';
+let sending = false;
+let completed = false;
+
+const money = value =>
+  new Intl.NumberFormat('pl-PL').format(value) + ' zł';
+
+function updateBudget(value) {
+  $('budgetPreview').textContent = money(Number(value) || 0);
+
+  $('slider').value = Math.min(
+    15000,
+    Math.max(500, Number(value) || 500)
+  );
+
+  document.querySelectorAll('[data-budget]').forEach(button => {
+    button.setAttribute(
+      'aria-pressed',
+      String(Number(button.dataset.budget) === Number(value))
+    );
+  });
+}
+
+$('budget').addEventListener('input', event => {
+  updateBudget(event.target.value);
+});
+
+$('slider').addEventListener('input', event => {
+  $('budget').value = event.target.value;
+  updateBudget(event.target.value);
+});
+
+$('presets').addEventListener('click', event => {
+  const button = event.target.closest('[data-budget]');
+  if (!button) return;
+
+  $('budget').value = button.dataset.budget;
+  updateBudget(button.dataset.budget);
+});
+
+$('description').addEventListener('input', () => {
+  $('count').textContent = $('description').value.length;
+});
+
+updateBudget($('budget').value);
+
+function status(message, kind) {
+  $('status').textContent = message;
+  $('status').className = 'status ' + kind;
+}
+
+form.addEventListener('submit', async event => {
+  event.preventDefault();
+
+  if (sending || completed || !form.reportValidity()) return;
+
+  if (location.protocol === 'file:') {
+    status(
+      'Podgląd lokalny: wysyłanie wymaga uruchomienia tego pliku ' +
+      'na serwerze Modulio z endpointem /api/enquiries.',
+      'error'
+    );
+    return;
+  }
+
+  const data = Object.fromEntries(new FormData(form));
+
+  for (const key of Object.keys(data)) {
+    data[key] = String(data[key]).trim();
+  }
+
+  data.budget = Number(data.budget);
+
+  if (
+    data.description.length < 20 ||
+    data.name.length < 2 ||
+    data.phone.replace(/\D/g, '').length < 7
+  ) {
+    status(
+      'Sprawdź nazwę, numer telefonu i opis projektu — ' +
+      'opis musi mieć minimum 20 znaków.',
+      'error'
+    );
+    return;
+  }
+
+  if (!enquiryId) enquiryId = crypto.randomUUID();
+  data.id = enquiryId;
+
+  sending = true;
+  $('fields').disabled = true;
+  $('submit').textContent = 'Wysyłanie…';
+  status('', '');
+
+  try {
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data),
+      signal: AbortSignal.timeout(30000)
+    });
+
+    if (!response.headers.get('content-type')?.includes('application/json')) {
+      throw new Error(
+        'Serwer formularza jest niedostępny. ' +
+        'Sprawdź konfigurację /api/enquiries.'
+      );
+    }
+
+    const result = await response.json();
+
+    if (result.resetId) enquiryId = '';
+
+    if (!response.ok) {
+      throw new Error(
+        result.error ||
+        'Nie udało się wysłać zgłoszenia. Spróbuj ponownie.'
+      );
+    }
+
+    completed = true;
+
+    status(
+      'Dziękujemy! Zgłoszenie zostało wysłane. ' +
+      'Skontaktujemy się w ciągu 48 godzin. Numer: ' +
+      result.id.slice(0, 8).toUpperCase(),
+      'success'
+    );
+
+    $('submit').textContent = 'Zgłoszenie wysłane ✓';
+
+  } catch (error) {
+    status(
+      error.name === 'TimeoutError'
+        ? 'Serwer nie odpowiedział na czas. Spróbuj ponownie — ' +
+          'dane pozostały w formularzu.'
+        : error.message,
+      'error'
+    );
+
+  } finally {
+    sending = false;
+
+    if (!completed) {
+      $('fields').disabled = false;
+      $('submit').textContent = 'Wyślij zgłoszenie →';
+    }
+  }
+});
+</script>
+</body>
+</html>
