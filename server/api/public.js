@@ -58,6 +58,23 @@ route('GET', '/api/auth/me', ({ user, session }) => ({
 
 route('POST', '/api/auth/login', async ({ req, res, body }) => {
   const ip = clientIp(req);
+
+  // ------------------------------------------------------------------
+  // TYMCZASOWE szybkie logowanie do /admin bez e-maila i hasła.
+  // Działa TYLKO, gdy w pliku .env jest ustawione: ADMIN_QUICK_LOGIN=true
+  // Loguje na pierwsze aktywne konto administratora.
+  // Gdy dodasz hasło — usuń tę linię z .env (albo ustaw false).
+  // ------------------------------------------------------------------
+  if (body.admin && process.env.ADMIN_QUICK_LOGIN === 'true' && !String(body.email ?? '').trim() && !body.password) {
+    const admin = q(`SELECT * FROM users WHERE role = 'admin' AND status = 'active' ORDER BY id LIMIT 1`).get();
+    if (!admin) throw new HttpError(404, 'Brak konta administratora. Ustaw ADMIN_EMAIL i ADMIN_PASSWORD w .env i uruchom serwer ponownie.');
+    admin.last_login_at = nowIso();
+    q('UPDATE users SET last_login_at = ? WHERE id = ?').run(admin.last_login_at, admin.id);
+    createSession(req, res, admin.id, body.remember !== false);
+    audit(req, admin, 'auth.admin_login', 'user', admin.id, 'szybkie logowanie bez hasła');
+    return { user: publicUser(admin) };
+  }
+
   const mail = email(body);
   limitOr429(`login-ip:${ip}`, 20, 15 * 60 * 1000);
   limitOr429(`login-mail:${mail}`, 8, 15 * 60 * 1000);
