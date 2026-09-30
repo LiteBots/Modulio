@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pl" class="no-js">
+<head>
+  <!--#include head-->
+  <link rel="stylesheet" href="/assets/css/app.css?v={{V}}">
+  <link rel="stylesheet" href="/assets/css/admin.css?v={{V}}">
+  <script src="/assets/js/theme.js?v={{V}}"></script>
+</head>
+<body class="{{BODY_CLASS}}">
+  <a class="skip-link" href="#view">Przejdź do treści</a>
+  <div class="app">
+    <aside class="sidebar admin-sidebar" id="sidebar" aria-label="Nawigacja panelu zarządzania">
+      <a class="brand" href="/admin" data-link><img class="brand-logo" src="/assets/img/logo.svg" alt="" width="34" height="34">modulio<span class="brand-dot">.</span><span class="admin-tag">admin</span></a>
+
+      <nav class="admin-nav" aria-label="Moduły">
+        <a class="side-link" href="/admin" data-link data-nav="pulpit"><i data-lucide="layout-dashboard"></i> Pulpit</a>
+        <a class="side-link" href="/admin/statystyki" data-link data-nav="statystyki"><i data-lucide="chart-column-big"></i> Statystyki</a>
+
+        <div class="side-label">Sprzedaż</div>
+        <a class="side-link" href="/admin/leady" data-link data-nav="leady"><i data-lucide="target"></i> Leady <span class="side-badge" data-badge="newLeads" hidden></span></a>
+        <a class="side-link" href="/admin/uzytkownicy" data-link data-nav="uzytkownicy"><i data-lucide="users"></i> Użytkownicy</a>
+        <a class="side-link" href="/admin/platnosci" data-link data-nav="platnosci"><i data-lucide="wallet-cards"></i> Płatności <span class="side-badge" data-badge="overdue" hidden></span></a>
+
+        <div class="side-label">Realizacja</div>
+        <a class="side-link" href="/admin/projekty" data-link data-nav="projekty"><i data-lucide="kanban"></i> Do zrobienia <span class="side-badge muted" data-badge="queued" hidden></span></a>
+        <a class="side-link" href="/admin/oprogramowanie" data-link data-nav="oprogramowanie"><i data-lucide="app-window"></i> Aktywne oprogramowanie</a>
+        <a class="side-link" href="/admin/zgloszenia" data-link data-nav="zgloszenia"><i data-lucide="life-buoy"></i> Zgłoszenia <span class="side-badge" data-badge="ticketsNew" hidden></span></a>
+        <a class="side-link" href="/admin/dokumenty" data-link data-nav="dokumenty"><i data-lucide="folder-open"></i> Dokumenty</a>
+
+        <div class="side-label">Wzrost</div>
+        <a class="side-link" href="/admin/marketing" data-link data-nav="marketing"><i data-lucide="megaphone"></i> Marketing</a>
+
+        <div class="side-label">System</div>
+        <a class="side-link" href="/admin/dziennik" data-link data-nav="dziennik"><i data-lucide="scroll-text"></i> Dziennik zdarzeń</a>
+        <a class="side-link" href="/admin/ustawienia" data-link data-nav="ustawienia"><i data-lucide="settings"></i> Ustawienia</a>
+      </nav>
+
+      <div class="side-user">
+        <span class="avatar" data-user-initials>—</span>
+        <div><b data-user-name>…</b><small data-user-role></small></div>
+        <button type="button" class="icon-btn" data-logout aria-label="Wyloguj się" title="Wyloguj się"><i data-lucide="log-out"></i></button>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+    <div class="app-main">
+      <header class="topbar" id="topbar">
+        <button type="button" class="icon-btn bordered menu-btn" id="menu-btn" aria-label="Otwórz menu" aria-controls="sidebar" aria-expanded="false"><i data-lucide="menu"></i></button>
+        <div class="topbar-title">
+          <div class="crumbs" id="crumbs"></div>
+          <h1 id="page-title">Panel zarządzania</h1>
+        </div>
+        <div class="global-search" id="global-search">
+          <i data-lucide="search"></i>
+          <label class="sr-only" for="gs-input">Szukaj w platformie</label>
+          <input id="gs-input" type="search" placeholder="Szukaj klientów, leadów, zgłoszeń…" autocomplete="off">
+          <kbd>Ctrl K</kbd>
+          <div class="gs-results" id="gs-results" hidden></div>
+        </div>
+        <div class="topbar-actions">
+          <div class="dropdown" id="quick-add">
+            <button type="button" class="button button-coral btn-sm" aria-haspopup="true" aria-expanded="false"><i data-lucide="plus"></i> <span class="hide-sm">Dodaj</span></button>
+            <div class="dropdown-menu" hidden>
+              <button type="button" data-quick="user"><i data-lucide="user-round-plus"></i> Użytkownik</button>
+              <button type="button" data-quick="lead"><i data-lucide="target"></i> Lead</button>
+              <button type="button" data-quick="project"><i data-lucide="kanban"></i> Projekt</button>
+              <button type="button" data-quick="software"><i data-lucide="app-window"></i> Oprogramowanie</button>
+              <button type="button" data-quick="invoice"><i data-lucide="receipt"></i> Faktura</button>
+              <button type="button" data-quick="payment"><i data-lucide="banknote"></i> Wpłata</button>
+              <button type="button" data-quick="document"><i data-lucide="upload"></i> Dokument</button>
+            </div>
+          </div>
+          <button type="button" class="icon-btn bordered" id="theme-btn" aria-label="Przełącz motyw" title="Przełącz motyw"><i data-lucide="moon"></i></button>
+        </div>
+      </header>
+
+      <main id="view" class="view" tabindex="-1" aria-live="polite"></main>
+    </div>
+  </div>
+
+  <div class="chart-tip" id="chart-tip" role="tooltip" hidden></div>
+  <div class="toast-host" id="toast-host" aria-live="polite"></div>
+  <script src="/assets/js/admin.js?v={{V}}" defer></script>
+</body>
+</html>
