@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pl" class="no-js">
+<head>
+  <!--#include head-->
+</head>
+<body class="{{BODY_CLASS}}">
+  <!--#include header-->
+  <main id="main" class="site-main">
+    <article class="wrap legal">
+      <nav aria-label="Okruszki"><ol class="breadcrumbs"><li><a href="/">Modulio</a></li><li aria-current="page">Polityka prywatności</li></ol></nav>
+      <h1>Polityka prywatności</h1>
+      <p class="note">Wzór do uzupełnienia — przed publikacją zweryfikuj treść z prawnikiem lub inspektorem ochrony danych i uzupełnij dane firmy w pliku <code>.env</code>.</p>
+
+      <h2>1. Administrator danych</h2>
+      <p>Administratorem danych osobowych jest {{LEGAL_NAME}}, {{COMPANY_ADDRESS}}. Kontakt w sprawach danych osobowych: <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a>.</p>
+
+      <h2>2. Jakie dane przetwarzamy i w jakim celu</h2>
+      <ul>
+        <li><strong>Formularz kontaktowy i konfigurator</strong> — imię i nazwisko lub nazwa firmy, e-mail, telefon, treść wiadomości. Cel: odpowiedź na zapytanie i przygotowanie oferty (art. 6 ust. 1 lit. b i f RODO).</li>
+        <li><strong>Konto w panelu klienta</strong> — imię i nazwisko, firma, e-mail, telefon, skrót hasła, historia logowań (data, adres IP, przeglądarka). Cel: realizacja umowy i bezpieczeństwo konta (art. 6 ust. 1 lit. b i f RODO).</li>
+        <li><strong>Zgłoszenia, dokumenty i faktury</strong> — treści przekazywane w ramach współpracy. Cel: realizacja umowy oraz obowiązki księgowe (art. 6 ust. 1 lit. b i c RODO).</li>
+      </ul>
+
+      <h2>3. Okres przechowywania</h2>
+      <p>Dane z zapytań przechowujemy do czasu zakończenia rozmów lub wniesienia sprzeciwu, nie dłużej niż 12 miesięcy. Dane konta — przez czas współpracy, a dokumenty księgowe przez okres wymagany przepisami.</p>
+
+      <h2>4. Odbiorcy danych</h2>
+      <p>Dane mogą być powierzane dostawcom hostingu, poczty elektronicznej i narzędzi niezbędnych do świadczenia usług — wyłącznie na podstawie umów powierzenia.</p>
+
+      <h2>5. Twoje prawa</h2>
+      <p>Masz prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, przenoszenia, sprzeciwu oraz wniesienia skargi do Prezesa UODO.</p>
+
+      <h2>6. Pliki cookies</h2>
+      <p>Serwis używa wyłącznie niezbędnego ciasteczka sesji (<code>modulio_sid</code>), które utrzymuje zalogowanie w panelu klienta. Nie stosujemy ciasteczek reklamowych ani analitycznych. Czcionki są ładowane z usługi Google Fonts.</p>
+
+      <h2>7. Bezpieczeństwo</h2>
+      <p>Hasła przechowujemy wyłącznie jako skróty kryptograficzne (scrypt). Sesje są chronione ciasteczkami HttpOnly i SameSite, a połączenie z serwisem jest szyfrowane.</p>
+    </article>
+  </main>
+  <!--#include footer-->
+  <script src="/assets/js/site.js?v={{V}}" defer></script>
+</body>
+</html>

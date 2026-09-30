@@ -1,0 +1,16 @@
+{
+  "name": "modulio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Modulio — strona, logowanie i panel klienta. Zero zależności: Node.js 22 + wbudowane SQLite.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/index.js",
+    "dev": "node --disable-warning=ExperimentalWarning --watch-path=server --watch-path=views server/index.js",
+    "cli": "node --disable-warning=ExperimentalWarning scripts/cli.js",
+    "icons": "node scripts/build-icons.js"
+  }
+}
