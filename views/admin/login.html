@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pl" class="no-js">
+<head>
+  <!--#include head-->
+  <link rel="stylesheet" href="/assets/css/app.css?v={{V}}">
+  <link rel="stylesheet" href="/assets/css/admin.css?v={{V}}">
+</head>
+<body class="{{BODY_CLASS}}">
+  <main id="main" class="admin-login">
+    <div class="admin-login-glow" aria-hidden="true"></div>
+    <section class="admin-login-card">
+      <div class="admin-login-brand">
+        <img src="/assets/img/logo.svg" alt="" width="56" height="56">
+        <div><b>modulio<span>.</span></b><small>Panel zarządzania</small></div>
+      </div>
+      <form id="admin-login-form" class="auth-form" novalidate>
+        <h1>Zaloguj się do panelu</h1>
+        <p class="auth-sub">Dostęp tylko dla zespołu Modulio. Wszystkie działania są zapisywane w dzienniku zdarzeń.</p>
+        <div class="field"><label for="a-email">E-mail</label><input id="a-email" name="email" type="email" autocomplete="username" required></div>
+        <div class="field"><label for="a-password">Hasło</label>
+          <div class="pw-wrap"><input id="a-password" name="password" type="password" autocomplete="current-password" required><button type="button" class="pw-toggle" aria-label="Pokaż hasło"><i data-lucide="eye"></i></button></div>
+        </div>
+        <label class="check-row"><input type="checkbox" name="remember"> Zapamiętaj to urządzenie (30 dni)</label>
+        <div class="auth-error" role="alert" hidden></div>
+        <button class="button button-coral button-block" type="submit"><i data-lucide="shield-check"></i> Zaloguj się</button>
+      </form>
+      <p class="admin-login-foot"><a href="/"><i data-lucide="arrow-left"></i> Strona Modulio</a><span>·</span><a href="/logowanie">Panel klienta</a></p>
+    </section>
+  </main>
+  <script src="/assets/js/admin-login.js?v={{V}}" defer></script>
+</body>
+</html>
